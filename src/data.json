@@ -1,0 +1,36 @@
+{
+    "sitename": "Ярус",
+    "phone": "+7 (4862) 50-85-35",
+    "phone_link": "84862508535",
+    "email": "da@yarus57.ru",
+    "menu": [
+        {
+            "title": "Ремонтные работы",
+            "url": "#"
+        },
+        {
+            "title": "Дизайн интерьера",
+            "url": "#"
+        },
+        {
+            "title": "Портфолио",
+            "url": "#"
+        },
+        {
+            "title": "О компании",
+            "url": "#"
+        },
+        {
+            "title": "Блог",
+            "url": "#"
+        },
+        {
+            "title": "Контакты",
+            "url": "#"
+        }
+    ],
+    "pages": {
+        "index": "index.html",
+        "repair_work": "repair_work.html" 
+    }
+}
