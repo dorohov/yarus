@@ -1,0 +1,6 @@
+@@for(var i = 0; i < 1; i++) {
+    <li class="is--active"><a href="`+menu[i].url+`">`+menu[i].title+`</a></li>
+}
+@@for(var i = 1; i < menu.length; i++) {
+    <li><a href="`+menu[i].url+`">`+menu[i].title+`</a></li>
+}

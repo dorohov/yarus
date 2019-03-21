@@ -4,7 +4,10 @@
     @@include('main/head.html', {"title": "Главная"})
 </head>
 <body>
-    @@include('main/navbar.html')
+    @@include('main/navbar.html', {
+        "type": "default",
+        "preloader": "small"
+    })
     <main>
         @@include('pages/index/index.main.html')
     </main>

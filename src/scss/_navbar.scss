@@ -2,4 +2,173 @@
     position: fixed;
     width: 100%;
     height: 100px;
+    z-index: 12000;
+    transition: .25s all ease;
+    &.is--dark {
+        background: $dark-bg-color;
+    }
+    &__inner {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        @extend .container;
+    }
+    &__logo {
+        svg {
+            fill: #fff;
+        }
+    }
+    &__menu {
+        margin-left: 70px;
+        height: 100%;
+        ul {
+            display: flex;
+            height: 100%;
+            li {
+                height: 100%;
+                a {
+                    display: block;
+                    height: 100%;
+                    line-height: 100px;
+                    font-weight: 300;
+                    font-size: 18px;
+                    color: #fff;
+                    padding: 0 30px;
+                    transition: .25s all ease;
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+                &.is--active {
+                    a {
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+    &__phone {
+        margin-left: auto;
+        a {
+            font-weight: 800;
+            color: #fff;
+            font-size: 24px;
+            transition: .25s all ease;
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+    &__mbtn {
+        margin-left: auto;
+        display: none;
+        height: 100%;
+        align-items: center;
+        button {
+            padding-left: 0;
+            padding-right: 0;
+            outline: none;
+            span {
+                &.hamburger-inner {
+                    background-color: #fff !important;
+                    &::after,
+                    &::before {
+                        background-color: #fff !important;
+                    }
+                }
+            }
+        }
+    }
+    &__mobile {
+        max-width: 350px;
+        width: 100%;
+        position: fixed;
+        z-index: 11000;
+        height: 100vh;
+        left: 0;
+        top: 0;
+        background: #fff;
+        transform: translateX(-100%);
+        transition: .25s all ease;
+        display: none;
+        &__menu {
+            padding: 30px 0;
+            ul {
+                li {
+                    a {
+                        color: $dark-text-color;
+                        font-size: 18px;
+                        display: block;
+                        padding: 8px 30px;
+                        transition: .25s all ease;
+                        &:hover {
+                            color: $primary-color;
+                        }
+                    }
+                    &.is--active {
+                        a {
+                            color: $primary-color;
+                        }
+                    }
+                }
+            }
+        }
+        &__phone {
+            a {
+                display: block;
+                font-size: 18px;
+                font-weight: 600;
+                padding: 8px 30px;
+                color: $dark-text-color;
+                transition: .25s all ease;
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1500px) {
+    .navbar {
+        &__menu {
+            margin-left: 30px;
+            ul {
+                li {
+                    a {
+                        padding-left: 15px;
+                        padding-right: 15px;
+                    }
+                }
+            }
+        }
+        &__phone {
+            a {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media (max-width: $resp1200) {
+    .navbar {
+        height: 70px;
+        background: $dark-bg-color;
+        &__logo {
+            svg {
+                width: 94px;
+                height: 40px;
+            }
+        }
+        &__menu,
+        &__phone {
+            display: none;
+        }
+        &__mbtn {
+            display: flex;
+        }
+        &__mobile {
+            display: block;
+        }
+    }
 }

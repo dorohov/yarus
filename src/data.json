@@ -32,5 +32,10 @@
     "pages": {
         "index": "index.html",
         "repair_work": "repair_work.html" 
+    },
+    "social": {
+        "vk": "https://vk.com/yarus57",
+        "instagram": "https://www.instagram.com/remont_yarus/",
+        "facebook": "https://www.facebook.com/yarus57/"
     }
 }

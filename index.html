@@ -5,13 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#b38144">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#b38144">
     <title>Главная - Ярус</title>
     <link rel="stylesheet" href="dist/css/style.css">
 </head>
 
 <body>
-    <!-- <script src="dist/js/loader.js"></script> -->
-    <header class="navbar">
+    <script src="dist/js/loader.js" data-type="small"></script>
+    <header class="navbar is--default ">
         <div class="navbar__inner">
             <div class="navbar__logo">
                 <a href="index.html">
@@ -20,17 +27,198 @@
                     </svg>
                 </a>
             </div>
-            <div class="navbar__menu"></div>
-            <div class="navbar__phone"></div>
-            <div class="navbar__mbtn"></div>
+            <div class="navbar__menu">
+                <ul>
+
+                    <li class="is--active"><a href="#">Ремонтные работы</a></li>
+
+
+                    <li><a href="#">Дизайн интерьера</a></li>
+
+                    <li><a href="#">Портфолио</a></li>
+
+                    <li><a href="#">О компании</a></li>
+
+                    <li><a href="#">Блог</a></li>
+
+                    <li><a href="#">Контакты</a></li>
+
+                </ul>
+            </div>
+            <div class="navbar__phone">
+                <a href="84862508535">+7 (4862) 50-85-35</a>
+            </div>
+            <div class="navbar__mbtn">
+                <button class="hamburger hamburger--spin" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </div>
         </div>
     </header>
+    <div class="navbar__mobile">
+        <div class="navbar__mobile__inner">
+            <div class="navbar__mobile__menu">
+                <ul>
+
+                    <li class="is--active"><a href="#">Ремонтные работы</a></li>
+
+
+                    <li><a href="#">Дизайн интерьера</a></li>
+
+                    <li><a href="#">Портфолио</a></li>
+
+                    <li><a href="#">О компании</a></li>
+
+                    <li><a href="#">Блог</a></li>
+
+                    <li><a href="#">Контакты</a></li>
+
+                </ul>
+            </div>
+            <div class="navbar__mobile__phone">
+                <a href="84862508535">+7 (4862) 50-85-35</a>
+            </div>
+        </div>
+    </div>
     <main>
-        index page
+        <div class="banner">
+            <div class="banner__inner">
+                <div class="banner__left"></div>
+                <div class="banner__right" style="background-image: url('img/banner.jpg');"></div>
+                <div class="banner__text">
+                    <div class="banner__text__inner">
+                        <div class="banner__text__name">
+                            Студия ремонта ярус
+                        </div>
+                        <div class="banner__text__btn">
+
+                            <a href="#" class="btn is--inverted">
+                                <span>Оставить заявку</span>
+                            </a>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="calculator">
+            <div class="calculator__inner">
+                <div class="calculator__left">
+                    <div class="calculator__left__inner">
+                        <div class="calculator__left__title">Рассчитайте стоимость ремонта</div>
+                        <div class="calculator__left__desc">Напишите нам на почту, или заполните форму и мы вышлем вам более подробную информацию по конкретному проекту.</div>
+                        <div class="calculator__left__socials">
+                            <ul>
+                                <li>
+                                    <a href="@@social.vk" target="_blank">
+                                        <svg class="svg-vk-dims svg is--vk">
+                                            <use xlink:href="img/svg/sprites.svg#vk"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@@social.instagram" target="_blank">
+                                        <svg class="svg-instagram-dims svg is--instagram">
+                                            <use xlink:href="img/svg/sprites.svg#instagram"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@@social.facebook" target="_blank">
+                                        <svg class="svg-facebook-dims svg is--facebook">
+                                            <use xlink:href="img/svg/sprites.svg#facebook"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="calculator__right">
+                    <div class="calculator__right__inner">
+                        <div class="calculator__right__title">Калькулятор</div>
+                        <div class="calculator__right__subtitle">1. Выберите тип дома:</div>
+                        <div class="calculator__right__steps">
+                            <div class="calculator__right__step is--one">
+                                <div class="calculator__radiobox">
+                                    <input type="radio" name="calc1" id="calc11">
+                                    <label class="calculator__radiobox__label" for="calc11">
+                                        <div class="calculator__radiobox__label__icon">
+                                            <svg class="svg-calc11-dims svg is--calc11">
+                                                <use xlink:href="img/svg/sprites.svg#calc11"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="calculator__radiobox__label__title">Новостройка</div>
+                                        <div class="calculator__radiobox__label__check">
+                                            <svg class="svg-calc_check-dims svg is--calc_check">
+                                                <use xlink:href="img/svg/sprites.svg#calc_check"></use>
+                                            </svg>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="calculator__radiobox">
+                                    <input type="radio" name="calc1" id="calc12">
+                                    <label class="calculator__radiobox__label" for="calc12">
+                                        <div class="calculator__radiobox__label__icon">
+                                            <svg class="svg-calc12-dims svg is--calc12">
+                                                <use xlink:href="img/svg/sprites.svg#calc12"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="calculator__radiobox__label__title">Вторичное жилье</div>
+                                        <div class="calculator__radiobox__label__check">
+                                            <svg class="svg-calc_check-dims svg is--calc_check">
+                                                <use xlink:href="img/svg/sprites.svg#calc_check"></use>
+                                            </svg>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="calculator__radiobox">
+                                    <input type="radio" name="calc1" id="calc13">
+                                    <label class="calculator__radiobox__label" for="calc13">
+                                        <div class="calculator__radiobox__label__icon">
+                                            <svg class="svg-calc13-dims svg is--calc13">
+                                                <use xlink:href="img/svg/sprites.svg#calc13"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="calculator__radiobox__label__title">Загородный дом</div>
+                                        <div class="calculator__radiobox__label__check">
+                                            <svg class="svg-calc_check-dims svg is--calc_check">
+                                                <use xlink:href="img/svg/sprites.svg#calc_check"></use>
+                                            </svg>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="calculator__btns">
+                                    <div class="calculator__btn">
+
+
+
+                                        <button type="submit" class="btn is--default">
+                                            <span>Продолжить</span>
+                                        </button>
+
+                                    </div>
+                                    <div class="calculator__btn"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <footer class="footer"></footer>
+    <div id="overlay"></div>
     <script src="dist/js/jquery-3.3.1.min.js"></script>
+    <script src="dist/js/svg4everybody.min.js"></script>
     <script src="dist/js/main.js"></script>
+    <script>
+        svg4everybody();
+    </script>
 </body>
 
 </html>

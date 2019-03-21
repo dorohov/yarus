@@ -1,13 +1,37 @@
-<!-- <script src="dist/js/loader.js"></script> -->
-<header class="navbar">
+<script src="dist/js/loader.js" data-type="@@preloader"></script>
+<header class="navbar is--@@type @@if(type == 'dark') {is--rdark}">
     <div class="navbar__inner">
         <div class="navbar__logo">
             <a href="@@pages.index">
                 @@include('../items/svg.html', {"name": "logo"})
             </a>
         </div>
-        <div class="navbar__menu"></div>
-        <div class="navbar__phone"></div>
-        <div class="navbar__mbtn"></div>
+        <div class="navbar__menu">
+            <ul>
+                @@include('../items/menu.html')
+            </ul>
+        </div>
+        <div class="navbar__phone">
+            <a href="@@phone_link">@@phone</a>
+        </div>
+        <div class="navbar__mbtn">
+            <button class="hamburger hamburger--spin" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </div>
     </div>
 </header>
+<div class="navbar__mobile">
+    <div class="navbar__mobile__inner">
+        <div class="navbar__mobile__menu">
+            <ul>
+                @@include('../items/menu.html')
+            </ul>
+        </div>
+        <div class="navbar__mobile__phone">
+            <a href="@@phone_link">@@phone</a>
+        </div>
+    </div>
+</div>
