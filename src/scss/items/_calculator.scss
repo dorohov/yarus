@@ -31,9 +31,8 @@
         &__socials {
             ul {
                 display: flex;
-                margin: 0 -35px;
                 li {
-                    padding: 0 35px;
+                    margin-right: 70px;
                     a {
                         svg {
                             fill: $dark-text-color;
@@ -53,9 +52,11 @@
         background: #F3F3F3;
         width: 100%;
         &__inner {
-            max-width: 520px;
+            max-width: 580px;
             width: 100%;
             margin: 0 auto;
+            padding-left: 30px;
+            padding-right: 30px;
         }
         &__title {
             font-size: 36px;
@@ -70,8 +71,15 @@
             color: $dark-text-color;
             margin-bottom: 40px;
         }
+        &__step {
+            display: none;
+            &.is--active {
+                display: block;
+            }
+        }
     }
     &__radiobox {
+        margin-bottom: 40px;
         input {
             display: none;
             &:checked {
@@ -91,7 +99,6 @@
             cursor: pointer;
             padding: 15px 0;
             border-bottom: 1px solid $dark-bg-color;
-            margin-bottom: 40px;
             &__title {
                 font-size: 18px;
                 font-weight: 300;
@@ -109,8 +116,78 @@
             }
         }
     }
+    &__input {
+        &.is--meters {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            .calculator__input__label {
+                font-weight: 300;
+                font-size: 18px;
+                color: $dark-text-color;
+                margin-left: 25px;
+                sup {
+                    font-size: 11px;
+                }
+            }
+        }
+        &.is--price {
+            margin-bottom: 35px;
+            .calculator__input__label {
+                line-height: 18px;
+                font-size: 16px;
+                color: $dark-text-color;
+                margin-bottom: 20px;
+            }
+            input {
+                max-width: 180px !important;
+                font-weight: 800;
+            }
+        }
+        &.is--phone {
+            margin-bottom: 50px;
+            input {
+                max-width: 270px !important;
+            }
+        }
+        input[type="number"],
+        input[type="text"] {
+            font-size: 16px;
+            line-height: 18px;
+            border: 1px solid #fff;
+            background: #fff;
+            outline: none;
+            text-align: center;
+            -moz-appearance:textfield;
+            max-width: 110px;
+            width: 100%;
+            display: block;
+            transition: .25s all ease;
+            padding: 22px 0;
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+            &:focus {
+                border-color: #DFDFDF;
+            }
+        }
+    }
     &__btns {
         padding-top: 20px;
+        display: flex;
+        align-items: center;
+        .calculator__btn {
+            &.is--prev {
+                margin-left: 30px;
+                a {
+                    cursor: pointer;
+                    color: $dark-text-color;
+                    font-size: 16px;
+                }
+            }
+        }
     }
 }
 
@@ -128,6 +205,97 @@
             }
             &__desc {
                 margin-bottom: 80px;
+            }
+        }
+    }
+}
+
+@media (max-width: $resp1025) {
+    .calculator {
+        &__inner {
+            flex-wrap: wrap;
+        }
+        &__left {
+            max-width: 768px !important;
+            min-width: 0 !important;
+            width: 100% !important;
+        }
+    }
+}
+
+@media (max-width: $resp768) {
+    .calculator {
+        &__left {
+            padding-top: 50px;
+            padding-bottom: 50px;
+            &__title {
+                font-size: 24px;
+                line-height: 25px;
+                margin-bottom: 20px;
+            }
+            &__desc {
+                font-size: 16px;
+                line-height: 18px;
+                margin-bottom: 30px;
+            }
+            &__socials {
+                ul {
+                    li {
+                        margin-right: 30px;
+                        a {
+                            svg {
+                                height: 30px;
+                                width: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &__right {
+            padding-top: 50px;
+            padding-bottom: 50px;
+            &__title {
+                font-size: 24px;
+                line-height: 25px;
+                margin-bottom: 20px;
+            }
+            &__subtitle {
+                font-size: 16px;
+                line-height: 18px;
+                margin-bottom: 30px;
+            }
+        }
+        &__radiobox {
+            margin-bottom: 30px;
+            &__label {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                &__title {
+                    font-size: 16px;
+                    margin-left: 10px;
+                }
+                &__icon {
+                    svg {
+                        width: 25px;
+                        height: 25px;
+                    }
+                }
+            }
+        }
+        &__btns {
+            flex-wrap: wrap;
+        }
+        &__btn {
+            &.is--prev {
+                margin-left: 0 !important;
+                padding-top: 20px;
+                width: 100%;
+            }
+        }
+        &__input {
+            &.is--phone {
+                margin-bottom: 20px;
             }
         }
     }

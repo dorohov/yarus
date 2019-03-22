@@ -1,0 +1,43 @@
+<div class="calculator__right__step" data-stepid="2">
+    <div class="calculator__radiobox">
+        <input type="radio" name="calc2" id="calc21">
+        <label class="calculator__radiobox__label" for="calc21">
+            <div class="calculator__radiobox__label__icon">
+                @@include('../../items/svg.html', {"name": "calc21"})
+            </div>
+            <div class="calculator__radiobox__label__title">Без учета черновых материалов</div>
+            <div class="calculator__radiobox__label__check">
+                @@include('../../items/svg.html', {"name": "calc_check"})
+            </div>
+        </label>
+    </div>
+    <div class="calculator__radiobox">
+        <input type="radio" name="calc2" id="calc22">
+        <label class="calculator__radiobox__label" for="calc22">
+            <div class="calculator__radiobox__label__icon">
+                @@include('../../items/svg.html', {"name": "calc22"})
+            </div>
+            <div class="calculator__radiobox__label__title">С учетом черновых материалов</div>
+            <div class="calculator__radiobox__label__check">
+                @@include('../../items/svg.html', {"name": "calc_check"})
+            </div>
+        </label>
+    </div>
+    <div class="calculator__input is--meters">
+        <input type="number" name="calc2" id="calc23" placeholder="Площадь">
+        <div class="calculator__input__label">м<sup>2</sup></div>
+    </div>
+    <div class="calculator__btns">
+        <div class="calculator__btn">
+            @@include('../../items/button.html', {
+                "color": "default",
+                "type": "submit",
+                "text": "Продолжить",
+                "href": "#"
+            })
+        </div>
+        <div class="calculator__btn is--prev">
+            <a>Вернуться назад</a>
+        </div>
+    </div>
+</div>

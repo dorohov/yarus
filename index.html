@@ -114,21 +114,21 @@
                         <div class="calculator__left__socials">
                             <ul>
                                 <li>
-                                    <a href="@@social.vk" target="_blank">
+                                    <a href="https://vk.com/yarus57" target="_blank">
                                         <svg class="svg-vk-dims svg is--vk">
                                             <use xlink:href="img/svg/sprites.svg#vk"></use>
                                         </svg>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="@@social.instagram" target="_blank">
+                                    <a href="https://www.instagram.com/remont_yarus/" target="_blank">
                                         <svg class="svg-instagram-dims svg is--instagram">
                                             <use xlink:href="img/svg/sprites.svg#instagram"></use>
                                         </svg>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="@@social.facebook" target="_blank">
+                                    <a href="https://www.facebook.com/yarus57/" target="_blank">
                                         <svg class="svg-facebook-dims svg is--facebook">
                                             <use xlink:href="img/svg/sprites.svg#facebook"></use>
                                         </svg>
@@ -141,9 +141,9 @@
                 <div class="calculator__right">
                     <div class="calculator__right__inner">
                         <div class="calculator__right__title">Калькулятор</div>
-                        <div class="calculator__right__subtitle">1. Выберите тип дома:</div>
+                        <div class="calculator__right__subtitle"></div>
                         <div class="calculator__right__steps">
-                            <div class="calculator__right__step is--one">
+                            <div class="calculator__right__step" data-stepid="1">
                                 <div class="calculator__radiobox">
                                     <input type="radio" name="calc1" id="calc11">
                                     <label class="calculator__radiobox__label" for="calc11">
@@ -202,9 +202,244 @@
                                         </button>
 
                                     </div>
-                                    <div class="calculator__btn"></div>
                                 </div>
                             </div>
+                            <div class="calculator__right__step" data-stepid="2">
+                                <div class="calculator__radiobox">
+                                    <input type="radio" name="calc2" id="calc21">
+                                    <label class="calculator__radiobox__label" for="calc21">
+                                        <div class="calculator__radiobox__label__icon">
+                                            <svg class="svg-calc21-dims svg is--calc21">
+                                                <use xlink:href="img/svg/sprites.svg#calc21"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="calculator__radiobox__label__title">Без учета черновых материалов</div>
+                                        <div class="calculator__radiobox__label__check">
+                                            <svg class="svg-calc_check-dims svg is--calc_check">
+                                                <use xlink:href="img/svg/sprites.svg#calc_check"></use>
+                                            </svg>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="calculator__radiobox">
+                                    <input type="radio" name="calc2" id="calc22">
+                                    <label class="calculator__radiobox__label" for="calc22">
+                                        <div class="calculator__radiobox__label__icon">
+                                            <svg class="svg-calc22-dims svg is--calc22">
+                                                <use xlink:href="img/svg/sprites.svg#calc22"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="calculator__radiobox__label__title">С учетом черновых материалов</div>
+                                        <div class="calculator__radiobox__label__check">
+                                            <svg class="svg-calc_check-dims svg is--calc_check">
+                                                <use xlink:href="img/svg/sprites.svg#calc_check"></use>
+                                            </svg>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="calculator__input is--meters">
+                                    <input type="number" name="calc2" id="calc23" placeholder="Площадь">
+                                    <div class="calculator__input__label">м<sup>2</sup></div>
+                                </div>
+                                <div class="calculator__btns">
+                                    <div class="calculator__btn">
+
+
+
+                                        <button type="submit" class="btn is--default">
+                                            <span>Продолжить</span>
+                                        </button>
+
+                                    </div>
+                                    <div class="calculator__btn is--prev">
+                                        <a>Вернуться назад</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calculator__right__step" data-stepid="3">
+                                <div class="calculator__input is--price">
+                                    <div class="calculator__input__label">Приблизительная цена</div>
+                                    <input type="text" value=" ₽" readonly name="calc3" id="calc31">
+                                </div>
+                                <div class="calculator__input is--phone">
+                                    <input type="text" placeholder="Номер телефона" name="calc3" id="calc32">
+                                </div>
+                                <div class="calculator__btns">
+                                    <div class="calculator__btn">
+
+
+
+                                        <button type="submit" class="btn is--default">
+                                            <span>Отправить</span>
+                                        </button>
+
+                                    </div>
+                                    <div class="calculator__btn is--prev">
+                                        <a>Вернуться назад</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="services">
+            <div class="services__list">
+                <ul>
+                    <li>
+                        <a href="#" class="services__block" style="background-image: url(img/services1.jpg);">
+                            <div class="services__block__title">Дизайн интерьера</div>
+                            <div class="services__block__link">
+                                <span>Перейти</span>
+                            </div>
+                            <div class="services__block__overlay"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="services__block" style="background-image: url(img/services2.jpg);">
+                            <div class="services__block__title">Ремонтные работы под ключ</div>
+                            <div class="services__block__link">
+                                <span>Перейти</span>
+                            </div>
+                            <div class="services__block__overlay"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="services__block" style="background-image: url(img/services3.jpg);">
+                            <div class="services__block__title">Ремонт после застройщика</div>
+                            <div class="services__block__link">
+                                <span>Перейти</span>
+                            </div>
+                            <div class="services__block__overlay"></div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="page guarantees">
+            <div class="container">
+                <div class="heading is--left">Гарантия качества работ</div>
+                <div class="guarantees__inner">
+                    <div class="guarantees__main">
+                        <div class="guarantees__main__left">
+                            <img src="img/guarantees.jpg" alt="">
+                        </div>
+                        <div class="guarantees__main__right">
+                            <div class="guarantees__main__right__top">
+                                <div class="guarantees__main__right__block">
+                                    <div class="guarantees__main__right__block__title">1 Год</div>
+                                    <div class="guarantees__main__right__block__desc">Гарантия на ремонт</div>
+                                </div>
+                                <div class="guarantees__main__right__block">
+                                    <div class="guarantees__main__right__block__title">5 Лет</div>
+                                    <div class="guarantees__main__right__block__desc">На рынке</div>
+                                </div>
+                                <div class="guarantees__main__right__block">
+                                    <div class="guarantees__main__right__block__title">60 +</div>
+                                    <div class="guarantees__main__right__block__desc">Реализованных объектов</div>
+                                </div>
+                            </div>
+                            <div class="guarantees__main__right__main">
+                                <div class="guarantees__block">
+                                    <div class="guarantees__block__title">Страховка всего имущества</div>
+                                    <div class="guarantees__block__desc">
+                                        <p>Мы предлагаем оформить страховой полис на квартиру, включая конструктивные элементы, отделку, мебель, домашнее имущество
+                                            и ответственность перед соседями по расширенному пакету рисков. Страховка покрывает все вынужденные расходы из-за ущерба,
+                                            и это еще один приятный бонус для наших заказчиков.</p>
+                                    </div>
+                                </div>
+                                <div class="guarantees__block">
+                                    <div class="guarantees__block__title">Комплексные услуги <br> «Под ключ»</div>
+                                    <div class="guarantees__block__desc">
+                                        <p>Мы берем на себя весь комплекс работ, начиная от дизайн-проекта
+                                            (с 3D визуализацией) и заканчивая установкой мелких мебельных аксессуаров. Мы подскажем как лучше всего использовать пространство и предложим лучший вариант под ваши задачи и бюджет.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="guarantees__footer">
+                        <div class="guarantees__block">
+                            <div class="guarantees__block__title">Собственные бригады <br> по ремонту</div>
+                            <div class="guarantees__block__desc">
+                                <p>Собственный штат узкоспециализирова—
+                                    нных специалистов, начиная от дизайнера, мастера-отделочника и заканчивая техническим директором и менеджером проекта – наше неоспоримое
+                                    преимущество.</p>
+                            </div>
+                        </div>
+                        <div class="guarantees__block">
+                            <div class="guarantees__block__title">Технический и авторский <br> надзор</div>
+                            <div class="guarantees__block__desc">
+                                <p>Ежедневно все работы на объекте контролируются прорабом.
+                                    Дополнительно каждый этап работ, документально, принимает технический директор, строго соблюдая смету
+                                    и условия договора.</p>
+                            </div>
+                        </div>
+                        <div class="guarantees__block">
+                            <div class="guarantees__block__title">Детализированная <br> смета</div>
+                            <div class="guarantees__block__desc">
+                                <p>Все этапы, перечни работ, стоимость материалов заранее обговариваются
+                                    с заказчиком и только после полного согласия и подписания договора
+                                    мы приступаем к работе.</p>
+                            </div>
+                        </div>
+                        <div class="guarantees__block">
+                            <div class="guarantees__block__title">Экономия на <br> материалах</div>
+                            <div class="guarantees__block__desc">
+                                <p>Мы работаем с поставщиками строите—
+                                    льных материалов напрямую, что позволяет сэкономить денежные средства и время
+                                    на поиск всех материалов.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page portfolio">
+            <div class="container">
+                <div class="portfolio__top">
+                    <div class="portfolio__heading">
+                        <div class="heading is--left">Наше портфолио</div>
+                    </div>
+                    <div class="portfolio__menu">
+                        <div class="portfolio__menu__tabs">
+                            <ul>
+                                <li class="is--active"><a href="#">Квартиры</a></li>
+                                <li><a href="#">Дома</a></li>
+                            </ul>
+                        </div>
+                        <div class="portfolio__menu__all"><a href="#">смотреть все +</a></div>
+                    </div>
+                </div>
+                <div class="portfolio__main">
+                    <div class="portfolio__main__left">
+                        <a class="portfolio__block" href="#" style="background-image: url(img/portfolio1.jpg);">
+                            <div class="portfolio__block__text">
+                                <div class="portfolio__block__title">Дизайн и ремонт квартиры</div>
+                                <div class="portfolio__block__subtitle"></div>
+                            </div>
+                            <div class="portfolio__block__overlay"></div>
+                        </a>
+                    </div>
+                    <div class="portfolio__main__right">
+                        <div class="portfolio__main__right__inner">
+                            <a class="portfolio__block" href="#" style="background-image: url(img/portfolio2.jpg);">
+                                <div class="portfolio__block__text">
+                                    <div class="portfolio__block__title">Дизайн и ремонт квартиры</div>
+                                    <div class="portfolio__block__subtitle"></div>
+                                </div>
+                                <div class="portfolio__block__overlay"></div>
+                            </a>
+                        </div>
+                        <div class="portfolio__main__right__inner">
+                            <a class="portfolio__block" href="#" style="background-image: url(img/portfolio3.jpg);">
+                                <div class="portfolio__block__text">
+                                    <div class="portfolio__block__title">Дизайн и ремонт квартиры</div>
+                                    <div class="portfolio__block__subtitle"></div>
+                                </div>
+                                <div class="portfolio__block__overlay"></div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -213,8 +448,15 @@
     </main>
     <footer class="footer"></footer>
     <div id="overlay"></div>
+    <div id="modal_calculator" class="modal">
+        <a class="modal__close" rel="modal:close"></a>
+        <div class="modal__heading">Заявка принята!</div>
+        <div class="modal__desc">Наши менеджеры скоро свяжутся с вами.</div>
+    </div>
     <script src="dist/js/jquery-3.3.1.min.js"></script>
     <script src="dist/js/svg4everybody.min.js"></script>
+    <script src="dist/js/jquery.min.js"></script>
+    <script src="dist/js/jquery.modal.min.js"></script>
     <script src="dist/js/main.js"></script>
     <script>
         svg4everybody();

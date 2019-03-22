@@ -1,0 +1,106 @@
+.portfolio {
+    background: #F3F3F3;
+    overflow: hidden;
+    &__top {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 55px;
+    }
+    &__menu {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        &__tabs {
+            ul {
+                display: flex;
+                li {
+                    padding: 0 15px;
+                    a {
+                        color: $dark-text-color;
+                        font-weight: 300;
+                        font-size: 14px;
+                        text-transform: uppercase;
+                    }
+                    &.is--active {
+                        a {
+                            font-weight: 800;
+                        }
+                    }
+                }
+            }
+        }
+        &__all {
+            margin-left: 50px;
+            a {
+                color: $dark-text-color;
+                font-weight: 300;
+                font-size: 13px;
+                text-transform: uppercase;
+            }
+        }
+    }
+    .heading {
+        margin-bottom: 0;
+    }
+    &__main {
+        height: 770px;
+        display: flex;
+        margin: 0 -15px;
+        &__left,
+        &__right {
+            height: 100%;
+            width: 100%;
+            max-width: 50%;
+            padding: 0 15px;
+        }
+        &__right {
+            &__inner {
+                height: 50%;
+                width: 100%;
+                &:first-child {
+                    padding-bottom: 15px;
+                }
+                &:last-child {
+                    padding-top: 15px;
+                }
+            }
+        }
+    }
+    &__block {
+        width: 100%;
+        height: 100%;
+        display: block;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        &__overlay {
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: 0;
+            bottom: 0;
+            background: rgba(#fff, .5);
+            transition: .4s all ease;
+        }
+        &__text {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            padding: 0 0 100px 100px;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-end;
+            display: flex;
+        }
+        &:hover {
+            .portfolio__block {
+                &__overlay {
+                    width: 85%;
+                    height: 85%;
+                }
+            }
+        }
+    }
+}
