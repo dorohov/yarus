@@ -20,9 +20,7 @@
                         font-weight: 300;
                         font-size: 14px;
                         text-transform: uppercase;
-                    }
-                    &.is--active {
-                        a {
+                        &.is--active {
                             font-weight: 800;
                         }
                     }
@@ -45,7 +43,7 @@
     &__main {
         height: 770px;
         display: flex;
-        margin: 0 -15px;
+        margin: 0 -15px 100px -15px;
         &__left,
         &__right {
             height: 100%;
@@ -81,6 +79,7 @@
             bottom: 0;
             background: rgba(#fff, .5);
             transition: .4s all ease;
+            z-index: 100;
         }
         &__text {
             position: absolute;
@@ -88,11 +87,28 @@
             height: 100%;
             left: 0;
             top: 0;
-            padding: 0 0 100px 100px;
+            padding: 0 0 100px 80px;
             flex-direction: column;
             align-items: flex-start;
             justify-content: flex-end;
             display: flex;
+            z-index: 200;
+            transition: .4s all ease;
+            opacity: 0;
+        }
+        &__title {
+            color: $dark-text-color;
+            font-weight: 800;
+            font-size: 36px;
+            max-width: 320px;
+            line-height: 36px;
+            margin-bottom: 15px;
+        }
+        &__subtitle {
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 21px;
+            color: $dark-text-color;
         }
         &:hover {
             .portfolio__block {
@@ -100,6 +116,117 @@
                     width: 85%;
                     height: 85%;
                 }
+                &__text {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &__btn {
+        text-align: center;
+    }
+}
+
+@media (max-width: $resp1025) {
+    .portfolio {
+        &__main {
+            flex-wrap: wrap;
+            height: auto;
+            margin-bottom: 10px;
+            &__left,
+            &__right {
+                max-width: 100%;
+            }
+            &__right {
+                &__inner {
+                    padding: 0 !important;
+                }
+            }
+        }
+        &__block {
+            height: 350px;
+            margin-bottom: 30px;
+        }
+        &__top {
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+        &__heading {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        &__menu {
+            margin: 0 auto 0 0;
+        }
+    }
+}
+
+@media (max-width: $resp768) {
+    .portfolio {
+        &__top {
+            margin-bottom: 30px;
+        }
+        &__main {
+            margin-left: 0;
+            margin-right: 0;
+            &__left,
+            &__right {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+        &__menu {
+            flex-wrap: wrap;
+            ul {
+                li {
+                    padding: 0;
+                    margin-right: 30px;
+                }
+            }
+            &__tabs {
+                margin-bottom: 20px;
+            }
+            &__all {
+                margin-left: 0;
+                width: 100%;
+            }
+        }
+        &__block {
+            height: 200px;
+            &__text {
+                padding-bottom: 20px;
+                padding-left: 20px;
+                opacity: 1;
+            }
+            &__title {
+                font-size: 27px;
+                line-height: 27px;
+            }
+            &__overlay {
+                width: 85%;
+                height: 85%;
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .portfolio {
+        &__block {
+            &__title {
+                font-size: 18px;
+                line-height: 18px;
+                margin-bottom: 10px;
+            }
+            &__subtitle {
+                font-size: 16px;
+            }
+            &__title,
+            &__subtitle {
+                max-width: 210px;
+            }
+            &__overlay {
+                height: 60%;
             }
         }
     }

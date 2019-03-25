@@ -24,13 +24,52 @@
     }
 }
 
+.breadcrumbs {
+    margin-bottom: 25px;
+    ul {
+        display: flex;
+        li {
+            position: relative;
+            &::after {
+                content: '...';
+                padding: 0 5px;
+                color: #747474;
+            }
+            &:last-child {
+                &::after {
+                    content: none;
+                }
+            }
+            a,
+            span {
+                font-weight: 400;
+                font-size: 14px;
+            }
+            a {
+                color: #747474;
+                transition: .25s all ease;
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+            span {
+                color: #2B2B2B;
+            }
+        }
+    }
+}
+
 @media (max-width: $resp768) {
     .heading {
         font-size: 24px;
         margin-bottom: 30px;
+        line-height: 24px;
     }
     .page {
         padding-top: 50px;
         padding-bottom: 50px;
+    }
+    .breadcrumbs {
+        display: none;
     }
 }

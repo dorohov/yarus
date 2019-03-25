@@ -2,27 +2,35 @@
     <div class="container">
         <div class="portfolio__top">
             <div class="portfolio__heading">
-                @@include('heading.html', {
-                    "text": "Наше портфолио",
-                    "align": "left"
-                })
+                @@if(type == 'portfolio') {
+                    @@include('heading.html', {
+                        "text": "Наше портфолио",
+                        "align": "left"
+                    })
+                }
+                @@if(type == 'projects') {
+                    @@include('heading.html', {
+                        "text": "Похожие проекты",
+                        "align": "left"
+                    })
+                }
             </div>
             <div class="portfolio__menu">
                 <div class="portfolio__menu__tabs">
                     <ul>
-                        <li class="is--active"><a href="#">Квартиры</a></li>
-                        <li><a href="#">Дома</a></li>
+                        <li><a class="_tab-target is--active" data-tabid="1">Квартиры</a></li>
+                        <li><a class="_tab-target" data-tabid="2">Дома</a></li>
                     </ul>
                 </div>
                 <div class="portfolio__menu__all"><a href="#">смотреть все +</a></div>
             </div>
         </div>
-        <div class="portfolio__main">
+        <div class="portfolio__main _tab-block is--open is--flex" data-tabid="1">
             <div class="portfolio__main__left">
                 <a class="portfolio__block" href="#" style="background-image: url(img/portfolio1.jpg);">
                     <div class="portfolio__block__text">
                         <div class="portfolio__block__title">Дизайн и ремонт квартиры</div>
-                        <div class="portfolio__block__subtitle"></div>
+                        <div class="portfolio__block__subtitle">ул. 8 марта, 8, г. Орёл</div>
                     </div>
                     <div class="portfolio__block__overlay"></div>
                 </a>
@@ -32,7 +40,7 @@
                     <a class="portfolio__block" href="#" style="background-image: url(img/portfolio2.jpg);">
                         <div class="portfolio__block__text">
                             <div class="portfolio__block__title">Дизайн и ремонт квартиры</div>
-                            <div class="portfolio__block__subtitle"></div>
+                            <div class="portfolio__block__subtitle">ул. 8 марта, 8, г. Орёл</div>
                         </div>
                         <div class="portfolio__block__overlay"></div>
                     </a>
@@ -41,12 +49,51 @@
                     <a class="portfolio__block" href="#" style="background-image: url(img/portfolio3.jpg);">
                         <div class="portfolio__block__text">
                             <div class="portfolio__block__title">Дизайн и ремонт квартиры</div>
-                            <div class="portfolio__block__subtitle"></div>
+                            <div class="portfolio__block__subtitle">ул. 8 марта, 8, г. Орёл</div>
                         </div>
                         <div class="portfolio__block__overlay"></div>
                     </a>
                 </div>
             </div>
+        </div>
+        <div class="portfolio__main _tab-block is--flex" data-tabid="2">
+            <div class="portfolio__main__left">
+                <a class="portfolio__block" href="#" style="background-image: url(img/portfolio1.jpg);">
+                    <div class="portfolio__block__text">
+                        <div class="portfolio__block__title">Дизайн и ремонт квартиры2</div>
+                        <div class="portfolio__block__subtitle">ул. 8 марта, 8, г. Орёл</div>
+                    </div>
+                    <div class="portfolio__block__overlay"></div>
+                </a>
+            </div>
+            <div class="portfolio__main__right">
+                <div class="portfolio__main__right__inner">
+                    <a class="portfolio__block" href="#" style="background-image: url(img/portfolio2.jpg);">
+                        <div class="portfolio__block__text">
+                            <div class="portfolio__block__title">Дизайн и ремонт квартиры2</div>
+                            <div class="portfolio__block__subtitle">ул. 8 марта, 8, г. Орёл</div>
+                        </div>
+                        <div class="portfolio__block__overlay"></div>
+                    </a>
+                </div>
+                <div class="portfolio__main__right__inner">
+                    <a class="portfolio__block" href="#" style="background-image: url(img/portfolio3.jpg);">
+                        <div class="portfolio__block__text">
+                            <div class="portfolio__block__title">Дизайн и ремонт квартиры2</div>
+                            <div class="portfolio__block__subtitle">ул. 8 марта, 8, г. Орёл</div>
+                        </div>
+                        <div class="portfolio__block__overlay"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio__btn">
+            @@include('button.html', {
+                "color": "default",
+                "type": "link",
+                "text": "Все проекты",
+                "href": "#"
+            })
         </div>
     </div>
 </div>

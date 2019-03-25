@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('main/head.html', {"title": "Наши работы"})
+</head>
+<body>
+    @@include('main/navbar.html', {
+        "type": "dark",
+        "preloader": "small"
+    })
+    <main class="__ispadding">
+        @@include('pages/our_work/our_work.main.html')
+    </main>
+    @@include('main/footer.html')
+</body>
+</html>

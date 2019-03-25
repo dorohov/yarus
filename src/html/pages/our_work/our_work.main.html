@@ -1,0 +1,35 @@
+<div class="page">
+    <div class="container">
+        @@include('../../items/breadcrumbs.html', {
+            "list": [
+                {
+                    "title": "Главная",
+                    "url": "@@pages.index"
+                }
+            ],
+            "current": "Наши работы"
+        })
+        @@include('../../items/heading.html', {
+            "text": "Ремонтные работы",
+            "align": "left"
+        })
+        <div class="our__work__container">
+            @@include('our_work.card.html', {
+                "image": "ow1.jpg",
+                "title": "Ремонт после застройщика (работы)"
+            })
+            @@include('our_work.card.html', {
+                "image": "ow2.jpg",
+                "title": "Ремонт ванны и санузлов (работы)"
+            })
+            @@include('our_work.card.html', {
+                "image": "ow3.jpg",
+                "title": "Эксклюзивный ремонт (работы)"
+            })
+            @@include('our_work.card.html', {
+                "image": "ow4.jpg",
+                "title": "Эксклюзивный ремонт (работы + черновой материал)"
+            })
+        </div>
+    </div>
+</div>

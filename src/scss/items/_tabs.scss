@@ -1,0 +1,14 @@
+._tab {
+    &-target {
+        cursor: pointer;
+    }
+    &-block {
+        display: none;
+        &.is--open {
+            display: block;
+            &.is--flex {
+                display: flex;
+            }
+        }
+    }
+}

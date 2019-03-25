@@ -1,0 +1,32 @@
+<div class="page form">
+    <div class="form__heading">
+        @@include('heading.html', {
+            "text": "@@heading",
+            "align": "center"
+        })
+    </div>
+    <form class="form__inner">
+        <div class="form__group is--border">
+            <input type="text" placeholder="Ваше имя">
+        </div>
+        <div class="form__group is--border">
+            <input type="text" placeholder="Ваш e-mail или телефон">
+        </div>
+        <div class="form__group is--border">
+            <input type="text" placeholder="Пару слов о задаче">
+        </div>
+        <div class="form__submit">
+            <div class="form__submit__btn">
+                @@include('button.html', {
+                    "color": "default",
+                    "type": "submit",
+                    "text": "Отправить",
+                    "href": "#"
+                })
+            </div>
+            <div class="form__submit__text">
+                Нажимая на кнопку отправить, Вы соглашаетесь с политикой <span><a href="#">обработки персональных данных</a></span>
+            </div>
+        </div>
+    </form>
+</div>

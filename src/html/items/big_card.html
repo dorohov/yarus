@@ -1,0 +1,57 @@
+<div class="tcard">
+    <div class="tcard__left">
+        <div class="tcard__left__carousel">
+            <div class="tcard__left__carousel__inner">
+                <div class="tcard__left__carousel__item" style="background-image: url(/img/builder1.jpg);"></div>
+                <div class="tcard__left__carousel__item" style="background-image: url(/img/builder1.jpg);"></div>
+                <div class="tcard__left__carousel__item" style="background-image: url(/img/builder1.jpg);"></div>
+                <div class="tcard__left__carousel__item" style="background-image: url(/img/builder1.jpg);"></div>
+                <div class="tcard__left__carousel__item" style="background-image: url(/img/builder1.jpg);"></div>
+                <div class="tcard__left__carousel__item" style="background-image: url(/img/builder1.jpg);"></div>
+            </div>
+            <div class="tcard__left__carousel__controls">
+                <button class="tcard__left__carousel__controls__btn is--prev">
+                    @@include('svg.html', {"name": "carousel_arrow"})
+                </button>
+                <button class="tcard__left__carousel__controls__btn is--next">
+                    @@include('svg.html', {"name": "carousel_arrow"})
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="tcard__right">
+        <div class="tcard__right__inner">
+            <div class="tcard__right__top">
+                <div class="tcard__right__top__breadcrumbs">
+                    @@include('breadcrumbs.html', {
+                        "list": [
+                            {
+                                "title": "Главная",
+                                "url": "@@pages.index"
+                            }
+                        ],
+                        "current": "Ремонт после застройщика"
+                    })
+                </div>
+            </div>
+            @@include('heading.html', {
+                "text": "Ремонт после застройщика",
+                "align": "left"
+            })
+            <div class="tcard__right__price">
+                от <span>2 700 &#8381;</span> /м<sup>2</sup>
+            </div>
+            <div class="tcard__right__desc">
+                <p>Заселение в новую квартиру — событие радостное и долгожданное, особенно, если нравится просторная, умело спланированная квартира. Но прежде, чем отпраздновать новоселье, нужно сделать ремонт. А чтобы его результат оправдал ожидания, выполнение отделочных работ лучше доверить профессионалам «Ярус».</p>
+            </div>
+            <div class="tcard__right__btn">
+                @@include('button.html', {
+                    "color": "default",
+                    "type": "link",
+                    "text": "Оставить заявку",
+                    "href": "#"
+                })
+            </div>
+        </div>
+    </div>
+</div>

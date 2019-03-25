@@ -31,7 +31,8 @@
     ],
     "pages": {
         "index": "index.html",
-        "repair_work": "repair_work.html" 
+        "our_work": "our_work.html",
+        "builder": "builder.html"
     },
     "social": {
         "vk": "https://vk.com/yarus57",

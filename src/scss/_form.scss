@@ -1,0 +1,93 @@
+.form {
+    &__inner {
+        max-width: 855px;
+        width: 100%;
+        margin: 0 auto;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    &__group {
+        margin-bottom: 40px;
+        position: relative;
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            border-width: 0 0 1px 0;
+            border-color: #000;
+            padding: 25px 0;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 18px;
+            outline: none;
+            color: $dark-text-color;
+        }
+        &.is--border {
+            &::after {
+                content: '';
+                width: 0;
+                height: 1px;
+                position: absolute;
+                background: $primary-color;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                transition: .7s all ease;
+            }
+            &.is--focus {
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    &__submit {
+        padding-top: 20px;
+        text-align: center;
+        &__btn {
+            margin-bottom: 40px;
+        }
+        &__text {
+            max-width: 470px;
+            margin: 0 auto;
+            font-weight: 300;
+            color: $dark-text-color;
+            line-height: 21px;
+            font-size: 16px;
+            span {
+                display: block;
+                width: 100%;
+                font-weight: 800;
+                a {
+                    color: $dark-text-color;
+                    transition: .25s all ease;
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $resp768) {
+    .form {
+        &__group {
+            margin-bottom: 20px;
+            input[type="text"],
+            input[type="email"],
+            input[type="password"] {
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+        }
+        &__submit {
+            &__text {
+                font-size: 14px;
+            }
+        }
+    }
+}

@@ -1,4 +1,80 @@
-<footer class="footer"></footer>
+<footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__wrap">
+            <div class="footer__block is--menu">
+                <nav class="footer__menu">
+                    <div class="footer__menu__title">Услуги</div>
+                    <div class="footer__menu__list">
+                        <ul>
+                            <li><a href="#">Дизайн интерьера</a></li>
+                            <li><a href="#">Ремонтные работы под ключ</a></li>
+                            <li><a href="#">Ремонт после застройщика</a></li>
+                            <li><a href="#">Ремонт ванны и санузлов</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="footer__block is--menu">
+                <nav class="footer__menu">
+                    <div class="footer__menu__title">О нас</div>
+                    <div class="footer__menu__list">
+                        <ul>
+                            <li><a href="#">Портфолио</a></li>
+                            <li><a href="#">О компании</a></li>
+                            <li><a href="#">Блог</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="footer__block is--menu">
+                <nav class="footer__menu">
+                    <div class="footer__menu__title">Контакты</div>
+                    <div class="footer__menu__list">
+                        <ul>
+                            <li><a href="tel:@@phone_link">@@phone</a></li>
+                            <li><a href="mailto::@@email">@@email</a></li>
+                            <li><span>г. Орёл, <br> Бульвар победы д.6, оф.52</span></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="footer__block is--social">
+                <nav class="footer__menu">
+                    <div class="footer__menu__title">Социальные сети</div>
+                    <div class="footer__menu__list is--social">
+                        <ul>
+                            <li>
+                                <a href="@@social.vk" target="_blank">
+                                    @@include('../items/svg.html', {"name": "vk"})
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@@social.instagram" target="_blank">
+                                    @@include('../items/svg.html', {"name": "instagram"})
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@@social.facebook" target="_blank">
+                                    @@include('../items/svg.html', {"name": "facebook"})
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="footer__block is--cop">
+                <div class="footer__name">ООО «Ярус» ИНН 5753066144</div>
+                <div class="footer__copyright">2016-2019 <br> &copy; Все права защищены</div>
+                <a class="footer__dorohov" href="https://dorohovdesign.ru/" target="_blank">
+                    <div class="footer__dorohov--text">Сделано в</div>
+                    <div class="footer__dorohov--logo">
+                        @@include('../items/svg.html', {"name": "dorohov"})
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
 <div id="overlay"></div>
 @@include('../modals/modal.main.html')
 @@include('scripts.html')
