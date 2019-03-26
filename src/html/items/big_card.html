@@ -2,12 +2,15 @@
     <div class="tcard__left">
         <div class="tcard__left__carousel">
             <div class="tcard__left__carousel__inner">
-                <div class="tcard__left__carousel__item" style="background-image: url(/img/builder1.jpg);"></div>
-                <div class="tcard__left__carousel__item" style="background-image: url(/img/builder1.jpg);"></div>
-                <div class="tcard__left__carousel__item" style="background-image: url(/img/builder1.jpg);"></div>
-                <div class="tcard__left__carousel__item" style="background-image: url(/img/builder1.jpg);"></div>
-                <div class="tcard__left__carousel__item" style="background-image: url(/img/builder1.jpg);"></div>
-                <div class="tcard__left__carousel__item" style="background-image: url(/img/builder1.jpg);"></div>
+                @@for(var i = 0; i < 5; i++) {
+                    <div class="tcard__left__carousel__item" style="background-image: url(img/@@type1.jpg);">
+                        @@if(img_text != 'none') {
+                            <div class="tcard__left__carousel__label">
+                                <div class="tcard__left__carousel__label__inner">@@img_text</div>
+                            </div>
+                        }
+                    </div>
+                }
             </div>
             <div class="tcard__left__carousel__controls">
                 <button class="tcard__left__carousel__controls__btn is--prev">
@@ -30,28 +33,84 @@
                                 "url": "@@pages.index"
                             }
                         ],
-                        "current": "Ремонт после застройщика"
+                        "current": "@@title"
                     })
                 </div>
+                @@if(type == 'work') {
+                    @@if(label_type == 'process') {
+                        <div class="tcard__right__top__label">
+                            <span class="is--process">В процессе реализации</span>
+                        </div>
+                    }
+                    @@if(label_type == 'complete') {
+                        <div class="tcard__right__top__label">
+                            <span class="is--complete">Реализован</span>
+                        </div>
+                    }
+                }
             </div>
-            @@include('heading.html', {
-                "text": "Ремонт после застройщика",
-                "align": "left"
-            })
-            <div class="tcard__right__price">
-                от <span>2 700 &#8381;</span> /м<sup>2</sup>
-            </div>
-            <div class="tcard__right__desc">
-                <p>Заселение в новую квартиру — событие радостное и долгожданное, особенно, если нравится просторная, умело спланированная квартира. Но прежде, чем отпраздновать новоселье, нужно сделать ремонт. А чтобы его результат оправдал ожидания, выполнение отделочных работ лучше доверить профессионалам «Ярус».</p>
-            </div>
-            <div class="tcard__right__btn">
-                @@include('button.html', {
-                    "color": "default",
-                    "type": "link",
-                    "text": "Оставить заявку",
-                    "href": "#"
+            <div class="tcard__right__heading is--@@type">
+                @@include('heading.html', {
+                    "text": "@@title",
+                    "align": "left"
                 })
             </div>
+            @@if(type == 'builder' || type == 'design') {
+                <div class="tcard__right__price">
+                    от <span>2 700 &#8381;</span> /м<sup>2</sup>
+                </div>
+                <div class="tcard__right__desc">
+                    <p>Заселение в новую квартиру — событие радостное и долгожданное, особенно, если нравится просторная, умело спланированная квартира. Но прежде, чем отпраздновать новоселье, нужно сделать ремонт. А чтобы его результат оправдал ожидания, выполнение отделочных работ лучше доверить профессионалам «Ярус».</p>
+                </div>
+            }
+            @@if(type == 'work') {
+                <div class="tcard__right__street">Ул. 8 марта, 8, г. Орёл</div>
+                <div class="tcard__right__worklist">
+                    <ul>
+                        <li><b>Площадь:</b> 243 м2</li>
+                        <li><b>Стиль:</b> Luxury</li>
+                        <li><b>Основная задача:</b> полная перепланировка всей квартиры, которая позволит расширить имеющиеся пространство и добавить новые детали для хранения вещей, а также приспособление жилого помещения по пожеланиям молодой семьи.</li>
+                    </ul>
+                </div>
+                 <div class="tcard__right__desc">
+                    <p>Квартира  предназначается для семейной пары с двумя маленькими детьми: мальчиком и девочкой.  Для людей с хорошим и утонченным вкусом!</p>
+                </div>
+            }
+            @@if(type == 'builder' || type == 'design') {
+                <div class="tcard__right__btn">
+                    @@include('button.html', {
+                        "color": "default",
+                        "type": "link",
+                        "text": "Оставить заявку",
+                        "href": "#"
+                    })
+                </div>
+            }
+            @@if(type == 'work') {
+                <div class="tcard__right__btns">
+                    <div class="tcard__right__btn">
+                        @@include('button.html', {
+                            "color": "default",
+                            "type": "link",
+                            "text": "Ремонтные работы",
+                            "href": "#"
+                        })
+                    </div>
+                    <div class="tcard__right__btn">
+                        @@include('button.html', {
+                            "color": "default",
+                            "type": "link",
+                            "text": "Дизайн интерьера",
+                            "href": "#"
+                        })
+                    </div>
+                </div>
+            }
+            @@if(type == 'design') {
+                <div class="tcard__right__footer">
+                    <div class="tcard__right__footer__cop">*Стоимость указана из расчета <br> площади от 100 м2</div>
+                </div>
+            }
         </div>
     </div>
 </div>

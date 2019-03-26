@@ -1,0 +1,42 @@
+<div class="our__work__design__card">
+    <div class="our__work__design__card__inner">
+        <div class="our__work__design__card__img">
+            <a href="@@pages.design">
+                <img src="img/@@image" alt="">
+            </a>
+        </div>
+        <div class="our__work__design__card__body">
+            <div class="our__work__design__card__top">
+                <div class="our__work__design__card__title">@@title</div>
+                <div class="our__work__design__card__price">от <span>@@price ₽</span> /м<sup>2</sup></div>
+            </div>
+            <div class="our__work__design__card__list">
+                <div class="our__work__design__card__list__inner">
+                    <ul>
+                        @@for(var i = 0; i < list_left.length; i++) {
+                            <li>`+list_left[i]+`</li>
+                        }
+                    </ul>
+                    <ul>
+                        @@for(var i = 0; i < list_right.length; i++) {
+                            <li>`+list_right[i]+`</li>
+                        }
+                    </ul>
+                </div>
+            </div>
+            <div class="our__work__design__card__footer">
+                <div class="our__work__design__card__btn">
+                    @@include('../../items/button.html', {
+                        "color": "default",
+                        "type": "link",
+                        "text": "Подробнее",
+                        "href": "@@pages.design"
+                    })
+                </div>
+                <div class="our__work__design__card__cop">
+                    *Стоимость указана из расчета <br> площади от 100 м2
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

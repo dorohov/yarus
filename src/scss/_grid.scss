@@ -6,6 +6,11 @@
 }
 
 .page {
+    padding-top: 70px;
+    padding-bottom: 100px;
+}
+
+.slide {
     padding-top: 120px;
     padding-bottom: 100px;
 }
@@ -28,6 +33,7 @@
     margin-bottom: 25px;
     ul {
         display: flex;
+        align-items: center;
         li {
             position: relative;
             &::after {
@@ -71,5 +77,9 @@
     }
     .breadcrumbs {
         display: none;
+    }
+    .slide {
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 }

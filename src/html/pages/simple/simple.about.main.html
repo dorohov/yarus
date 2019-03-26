@@ -1,0 +1,25 @@
+<div class="about__top">
+    <div class="about__top__inner">
+        <div class="about__top__breadcrumbs">
+            @@include('../../items/breadcrumbs.html', {
+                "list": [
+                    {
+                        "title": "Главная",
+                        "url": "@@pages.index"
+                    }
+                ],
+                "current": "О компании"
+            })
+        </div>
+        <div class="about__top__heading">
+            @@include('../../items/heading.html', {
+                "text": "О компании",
+                "align": "left"
+            })
+        </div>
+    </div>
+</div>
+@@include('simple.about.desc.html')
+@@include('../../items/form.html', {
+    "heading": "Получить консультацию"
+})

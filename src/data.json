@@ -6,33 +6,44 @@
     "menu": [
         {
             "title": "Ремонтные работы",
-            "url": "#"
+            "url": "@@pages.our_work"
         },
         {
             "title": "Дизайн интерьера",
-            "url": "#"
+            "url": "@@pages.our_work_design"
         },
         {
             "title": "Портфолио",
-            "url": "#"
+            "url": "@@pages.portfolio"
         },
         {
             "title": "О компании",
-            "url": "#"
+            "url": "@@pages.about"
         },
         {
             "title": "Блог",
-            "url": "#"
+            "url": "@@pages.blog"
         },
         {
             "title": "Контакты",
-            "url": "#"
+            "url": "@@pages.contacts"
         }
     ],
     "pages": {
         "index": "index.html",
         "our_work": "our_work.html",
-        "builder": "builder.html"
+        "our_work_design": "our_work_design.html",
+        "builder": "builder.html",
+        "design": "design.html",
+        "work_process": "work_process.html",
+        "work_complete": "work_complete.html",
+        "portfolio": "portfolio.html",
+        "about": "about.html",
+        "blog": "blog.html",
+        "article": "article.html",
+        "contacts": "contacts.html",
+        "reviews": "reviews.html",
+        "review": "review.html"
     },
     "social": {
         "vk": "https://vk.com/yarus57",

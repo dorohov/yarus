@@ -60,6 +60,102 @@
             }
         }
     }
+    &__design {
+        &__card {
+            padding: 0 15px;
+            max-width: 50%;
+            margin-bottom: 30px;
+            &__inner {
+                background: #F3F3F3;
+                height: 100%;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            &__img {
+                height: 400px;
+                overflow: hidden;
+                img {
+                    transition: .25s all ease;
+                }
+                &:hover {
+                    img {
+                        transform: scale(1.02);
+                    }
+                }
+            }
+            &__body {
+                padding: 50px 60px 70px 60px;
+                height: calc(100% - 390px);
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            &__top {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 45px;
+            }
+            &__title {
+                font-size: 30px;
+                font-weight: 800;
+                color: $dark-text-color;
+            }
+            &__price {
+                font-weight: 300;
+                color: $dark-text-color;
+                font-size: 18px;
+                line-height: 18px;
+                span {
+                    font-size: 30px;
+                    line-height: 32px;
+                    font-weight: 800;
+                }
+            }
+            &__list {
+                margin-bottom: auto;
+                &__inner {
+                    margin: 0 -15px 50px -15px;
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+                ul {
+                    max-width: 50%;
+                    width: 100%;
+                    li {
+                        padding: 0 15px;
+                        font-weight: 300;
+                        color: $dark-text-color;
+                        font-size: 18px;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+            &__footer {
+                margin-top: auto;
+                display: flex;
+                align-items: flex-end;
+                margin: 0 -15px;
+                overflow: hidden;
+            }
+            &__btn,
+            &__cop {
+                padding: 0 15px;
+            }
+            &__btn {
+                width: 50%;
+                .btn {
+                    width: 100%;
+                }
+            }
+            &__cop {
+                font-weight: 800;
+                font-size: 16px;
+                color: $dark-text-color;
+            }
+        }
+    }
 }
 
 @media (max-width: 1650px) {
@@ -78,6 +174,44 @@
                 }
             }
         }
+        &__design {
+            &__card {
+                &__img {
+                    height: 470px;
+                    img {
+                        width: auto;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    .our__work {
+        &__design {
+            &__card {
+                &__body {
+                    padding: 40px 40px 70px;
+                }
+                &__title {
+                    font-size: 24px;
+                }
+                &__list {
+                    ul {
+                        li {
+                            font-size: 16px;
+                        }
+                    }
+                }
+                &__cop {
+                    br {
+                        display: none;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -86,6 +220,23 @@
         &__card {
             max-width: 33.3333%;
         }
+        &__design {
+            &__card {
+                &__footer {
+                    flex-wrap: wrap;
+                }
+                &__btn {
+                    max-width: 100%;
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+                &__cop {
+                    br {
+                        display: block;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -93,6 +244,49 @@
     .our__work {
         &__card {
             max-width: 50%;
+        }
+        &__design {
+            &__card {
+                max-width: 100%;
+                &__img {
+                    height: auto;
+                    width: 100%;
+                    img {
+                        height: auto;
+                        width: 100%;
+                    }
+                }
+                &__body {
+                    height: auto;
+                }
+                &__btn {
+                    max-width: 50%;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $resp768) {
+    .our__work {
+        &__design {
+            &__card {
+                &__top {
+                    flex-wrap: wrap;
+                }
+                &__title {
+                    max-width: 100%;
+                    width: 100%;
+                    margin-bottom: 20px;
+                    br {
+                        display: none;
+                    }
+                }
+                &__btn {
+                    margin-bottom: 20px;
+                }
+            }
         }
     }
 }
@@ -107,6 +301,49 @@
                 padding-bottom: 20px;
                 padding-left: 20px;
                 height: 70%;
+            }
+        }
+        &__design {
+            &__card {
+                &__top {
+                    margin-bottom: 20px;
+                }
+                &__title {
+                    font-size: 18px;
+                }
+                &__price {
+                    font-size: 16px;
+                    span {
+                        font-size: 20px;
+                    }
+                }
+                &__body {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    padding-top: 20px;
+                    padding-bottom: 30px;
+                }
+                &__list {
+                    flex-wrap: wrap;
+                    ul {
+                        max-width: 100%;
+                        li {
+                            font-size: 14px;
+                        }
+                    }
+                    &__inner {
+                        margin-bottom: 20px;
+                    }
+                }
+                &__btn {
+                    max-width: 100%;
+                }
+                &__cop {
+                    font-size: 14px;
+                    br {
+                        display: none;
+                    }
+                }
             }
         }
     }

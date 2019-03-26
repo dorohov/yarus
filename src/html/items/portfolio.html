@@ -1,5 +1,23 @@
-<div class="page portfolio">
+@@if(view == "small") {
+    <div class="slide portfolio is--@@align is--small">
+}
+@@if(view == "all") {
+    <div class="page portfolio is--@@align is--all">
+}
     <div class="container">
+        @@if(view == "all") {
+            <div class="portfolio__breadcrumbs">
+                    @@include('breadcrumbs.html', {
+                        "list": [
+                            {
+                                "title": "Главная",
+                                "url": "@@pages.index"
+                            }
+                        ],
+                        "current": "Наши работы"
+                    })
+                </div>
+        }
         <div class="portfolio__top">
             <div class="portfolio__heading">
                 @@if(type == 'portfolio') {
@@ -22,78 +40,44 @@
                         <li><a class="_tab-target" data-tabid="2">Дома</a></li>
                     </ul>
                 </div>
-                <div class="portfolio__menu__all"><a href="#">смотреть все +</a></div>
+                @@if(view == 'small') {
+                    <div class="portfolio__menu__all"><a href="@@pages.portfolio">смотреть все +</a></div>
+                }
             </div>
         </div>
-        <div class="portfolio__main _tab-block is--open is--flex" data-tabid="1">
-            <div class="portfolio__main__left">
-                <a class="portfolio__block" href="#" style="background-image: url(img/portfolio1.jpg);">
-                    <div class="portfolio__block__text">
-                        <div class="portfolio__block__title">Дизайн и ремонт квартиры</div>
-                        <div class="portfolio__block__subtitle">ул. 8 марта, 8, г. Орёл</div>
-                    </div>
-                    <div class="portfolio__block__overlay"></div>
-                </a>
-            </div>
-            <div class="portfolio__main__right">
-                <div class="portfolio__main__right__inner">
-                    <a class="portfolio__block" href="#" style="background-image: url(img/portfolio2.jpg);">
-                        <div class="portfolio__block__text">
-                            <div class="portfolio__block__title">Дизайн и ремонт квартиры</div>
-                            <div class="portfolio__block__subtitle">ул. 8 марта, 8, г. Орёл</div>
-                        </div>
-                        <div class="portfolio__block__overlay"></div>
-                    </a>
-                </div>
-                <div class="portfolio__main__right__inner">
-                    <a class="portfolio__block" href="#" style="background-image: url(img/portfolio3.jpg);">
-                        <div class="portfolio__block__text">
-                            <div class="portfolio__block__title">Дизайн и ремонт квартиры</div>
-                            <div class="portfolio__block__subtitle">ул. 8 марта, 8, г. Орёл</div>
-                        </div>
-                        <div class="portfolio__block__overlay"></div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="portfolio__main _tab-block is--flex" data-tabid="2">
-            <div class="portfolio__main__left">
-                <a class="portfolio__block" href="#" style="background-image: url(img/portfolio1.jpg);">
-                    <div class="portfolio__block__text">
-                        <div class="portfolio__block__title">Дизайн и ремонт квартиры2</div>
-                        <div class="portfolio__block__subtitle">ул. 8 марта, 8, г. Орёл</div>
-                    </div>
-                    <div class="portfolio__block__overlay"></div>
-                </a>
-            </div>
-            <div class="portfolio__main__right">
-                <div class="portfolio__main__right__inner">
-                    <a class="portfolio__block" href="#" style="background-image: url(img/portfolio2.jpg);">
-                        <div class="portfolio__block__text">
-                            <div class="portfolio__block__title">Дизайн и ремонт квартиры2</div>
-                            <div class="portfolio__block__subtitle">ул. 8 марта, 8, г. Орёл</div>
-                        </div>
-                        <div class="portfolio__block__overlay"></div>
-                    </a>
-                </div>
-                <div class="portfolio__main__right__inner">
-                    <a class="portfolio__block" href="#" style="background-image: url(img/portfolio3.jpg);">
-                        <div class="portfolio__block__text">
-                            <div class="portfolio__block__title">Дизайн и ремонт квартиры2</div>
-                            <div class="portfolio__block__subtitle">ул. 8 марта, 8, г. Орёл</div>
-                        </div>
-                        <div class="portfolio__block__overlay"></div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="portfolio__btn">
-            @@include('button.html', {
-                "color": "default",
-                "type": "link",
-                "text": "Все проекты",
-                "href": "#"
+        <div class="portfolio__main _tab-block is--open" data-tabid="1">
+            @@include('portfolio.tiles3.html', {
+                "align": "left"
             })
+            @@if(view == 'all') {
+                @@include('portfolio.tiles3.html', {
+                    "align": "right"
+                })
+                @@include('portfolio.tiles2.html')
+                @@include('portfolio.tiles1.html')
+            }
         </div>
+        <div class="portfolio__main _tab-block" data-tabid="2">
+            @@include('portfolio.tiles3.html', {
+                "align": "left"
+            })
+            @@if(view == 'all') {
+                @@include('portfolio.tiles3.html', {
+                    "align": "right"
+                })
+                @@include('portfolio.tiles2.html')
+                @@include('portfolio.tiles1.html')
+            }
+        </div>
+        @@if(view == 'small') {
+            <div class="portfolio__btn">
+                @@include('button.html', {
+                    "color": "default",
+                    "type": "link",
+                    "text": "Все проекты",
+                    "href": "@@pages.portfolio"
+                })
+            </div>
+        }
     </div>
 </div>
