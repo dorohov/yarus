@@ -1,0 +1,50 @@
+<div class="reviews page">
+    <div class="reviews__inner">
+        @@include('../../items/breadcrumbs.html', {
+            "list": [
+                {
+                    "title": "Главная",
+                    "url": "@@pages.index"
+                }
+            ],
+            "current": "Отзывы"
+        })
+        @@include('../../items/heading.html', {
+            "text": "Отзывы",
+            "align": "left"
+        })
+        <div class="reviews__list">
+            @@include('simple.about.reviews.block.html', {
+                "name": "Наталья Тарасенко",
+                "project": "Косметический ремонт учебного центра <br> по ул. Салтыкова Щедрина",
+                "review": "Выражаю огромную благодарность за проделанную работу, сделанную на высочайшем уровне.В отведённые сроки, без всяческих задержек и проволочек.",
+                "date": "07.11.2017",
+                "type": "big",
+                "vk_url": "https://vk.com",
+                "original_photo": "review_original.jpg",
+                "id": 1
+            })
+            @@include('simple.about.reviews.block.html', {
+                "name": "Альбина Самойлова",
+                "project": "Дизайнерский ремонт салона <br> красоты «Под ключ»",
+                "review": "В студию ремонта «Ярус» я обратилась с непростой задачей: в максимально короткий срок (2 месяца) сделать высококачественный ремонт на 150 м2.",
+                "date": "31.10.2017",
+                "type": "big",
+                "vk_url": "https://vk.com",
+                "original_photo": "review_original.jpg",
+                "id": 2
+            })
+            @@include('simple.about.reviews.block.html', {
+                "name": "Константин Иванов",
+                "project": "Ремонт кухни-столовой по <br> адресу Бульвар победы, 5",
+                "review": "Выполнен ремонт кухни-столовой великолепно,мастера отличные! Всем рекомендую фирму «Ярус».Работали отлично,быстро и качественно.",
+                "date": "23.01.2017",
+                "type": "big",
+                "vk_url": "https://vk.com",
+                "original_photo": "review_original.jpg",
+                "id": 3
+            })
+        </div>
+        @@include('../../items/pagination.html')
+    </div>
+</div>

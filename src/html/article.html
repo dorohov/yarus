@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('main/head.html', {"title": "Поп-арт"})
+</head>
+<body>
+    @@include('main/navbar.html', {
+        "type": "dark",
+        "preloader": "small"
+    })
+    <main class="__ispadding">
+        @@include('pages/simple/simple.blog.article.html')
+    </main>
+    @@include('main/footer.html')
+</body>
+</html>

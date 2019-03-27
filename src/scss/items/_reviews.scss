@@ -1,0 +1,226 @@
+.reviews {
+    &__inner {
+        @extend .container;
+    }
+    &__list {
+        margin: 0 -30px;
+        justify-content: space-between;
+        margin-bottom: 80px;
+        display: flex;
+    }
+    &__current {
+        display: flex;
+        justify-content: space-between;
+        .heading {
+            margin-bottom: 30px;
+        }
+        &__left {
+            &__project {
+                font-weight: 800;
+                font-size: 24px;
+                line-height: 29px;
+                margin-bottom: 20px;
+                color: $dark-text-color;
+            }
+            &__review {
+                margin-bottom: 30px;
+                p {
+                    margin: 0;
+                    color: $dark-text-color;
+                    font-weight: 300;
+                    font-size: 18px;
+                    line-height: normal;
+                }
+            }
+            &__vk {
+                margin-bottom: 30px;
+                svg {
+                    fill: $primary-color;
+                    transition: .25s all ease;
+                    &:hover {
+                        fill: $dark-bg-color;
+                    }
+                }
+            }
+            &__original {
+                a {
+                    font-size: 24px;
+                    line-height: 25px;
+                    color: $primary-color;
+                    font-weight: 300;
+                    transition: .25s all ease;
+                    &:hover {
+                        color: $dark-text-color;
+                    }
+                }
+            }
+        }
+        &__right {
+            margin-left: 60px;
+            &__link {
+                display: flex;
+                width: 650px;
+                height: 480px;
+                align-items: flex-end;
+                background-size: cover;
+                background-position: center;
+                &:hover {
+                    .reviews {
+                        &__current {
+                            &__right {
+                                &__link {
+                                    &__text {
+                                        background: rgba(#fff, .7);
+                                        span {
+                                            &::after {
+                                                right: -10px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &__text {
+                    width: 80%;
+                    padding: 35px 50px;
+                    background: rgba(#fff, .5);
+                    transition: .25s all ease;
+                    span {
+                        color: $dark-text-color;
+                        font-size: 24px;
+                        line-height: 25px;
+                        font-weight: 300;
+                        position: relative;
+                        padding-right: 40px;
+                        &::after {
+                            content: '';
+                            height: 1px;
+                            width: 32px;
+                            background: $dark-bg-color;
+                            position: absolute;
+                            top: 50%;
+                            right: 0;
+                            transition: .25s all ease;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $resp1200) {
+    .reviews {
+        &__list {
+            flex-wrap: wrap;
+        }
+        &__current {
+            &__left {
+                .heading {
+                    font-size: 34px;
+                    line-height: 40px;
+                    margin-bottom: 10px;
+                }
+                &__project {
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+                &__review {
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
+            &__right {
+                &__link {
+                    width: 460px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $resp1025) {
+    .reviews {
+        &__current {
+            &__right {
+                &__link {
+                    width: 390px;
+                    &__text {
+                        padding: 15px 20px;
+                        span {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .reviews {
+        &__current {
+            flex-wrap: wrap;
+            flex-flow: wrap;
+            &__left {
+                margin-bottom: 30px;
+            }
+            &__right {
+                margin: 0;
+                width: 100%;
+                margin-bottom: 40px;
+                &__link {
+                    height: 300px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $resp768) {
+    .reviews {
+        &__list {
+            margin-bottom: 30px;
+        }
+        &__current {
+            &__left {
+                .heading {
+                    font-size: 28px;
+                }
+                &__project {
+                    font-size: 18px;
+                    line-height: 20px;
+                }
+                &__review {
+                    margin-bottom: 20px;
+                }
+                &__vk {
+                    margin-bottom: 20px;
+                }
+                &__original {
+                    a {
+                        font-size: 18px;
+                    }
+                }
+            }
+            &__right {
+                margin-bottom: 0;
+                &__link {
+                    height: 200px;
+                    &__text {
+                        span {
+                            padding-right: 0;
+                            &::after {
+                                content: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -23,6 +23,7 @@
             line-height: 18px;
             outline: none;
             color: $dark-text-color;
+            background: transparent;
         }
         &.is--border {
             &::after {

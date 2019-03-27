@@ -1,0 +1,36 @@
+<div class="contacts">
+    <div class="contacts__inner">
+        <div class="contacts__map">
+            <div id="map"></div>
+        </div>
+        <div class="contacts__info">
+            <div class="contacts__info__top">
+                <div class="contacts__info__top__heading">
+                    @@include('../../items/heading.html', {
+                        "text": "Контакты",
+                        "align": "left"
+                    })
+                </div>
+                <div class="contacts__info__top__lists">
+                    <div class="contacts__info__top__block is--addres">
+                        <span>Россия, г. Орёл, <br> бульвар Победы д.6, оф.52</span>
+                    </div>
+                    <div class="contacts__info__top__block is--time">
+                        <span>
+                            Пн-Пт: с 9:00 до 18:00 <br>
+                            Сб-Вс: выходной
+                        </span>
+                    </div>
+                    <div class="contacts__info__top__block is--phones">
+                        <a href="tel:74862508535">+7 (4862) 50-85-35</a><br>
+                        <a href="tel:79534780222">+7 (953) 478-02-22</a>
+                    </div>
+                    <div class="contacts__info__top__block is--email">
+                        <a href="mailto:@@email">@@email</a>
+                    </div>
+                </div>
+            </div>
+            <div class="contacts__info__form">@@include('simple.contacts.form.html')</div>
+        </div>
+    </div>
+</div>

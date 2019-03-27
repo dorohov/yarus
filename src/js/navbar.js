@@ -8,6 +8,9 @@
         function setNavbar() {
             var navbarHeight = $('.navbar').innerHeight()
             var bannerWidth = $('.banner__left').innerWidth()
+
+            var mainMinHeight = $(window).innerHeight() - $('.footer').innerHeight()
+
             if(navbarHeight) {
                 $('main.__ispadding').css('padding-top', navbarHeight + 'px')
                 $('.navbar__mobile__inner').css('padding-top', navbarHeight + 'px')
@@ -17,6 +20,7 @@
             }else {
                 $('.navbar__mobile').css('max-width','380px')
             }
+            $('main').css("min-height", mainMinHeight);
         }
 
         function fixeNavbar() {

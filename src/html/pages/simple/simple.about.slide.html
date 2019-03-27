@@ -1,0 +1,21 @@
+<div class="about__slides__block is--@@align">
+    <div class="about__slides__block__carousel">
+        <div class="about__slides__block__carousel__inner">
+            @@for(var i = 0; i < photos.length; i++) {
+                <div class="about__slides__block__carousel__item"><img src="img/`+photos[i]+`" alt=""></div>
+            }
+        </div>
+        <div class="about__slides__block__carousel__controls">
+            <button class="is--next">
+                @@include('../../items/svg.html', {"name": "carousel_arrow"})
+            </button>
+            <button class="is--prev">
+                @@include('../../items/svg.html', {"name": "carousel_arrow"})
+            </button>
+        </div>
+    </div>
+    <div class="about__slides__block__text">
+        <div class="about__slides__block__text__title">@@title</div>
+        <div class="about__slides__block__text__desc">@@desc</div>
+    </div>
+</div>

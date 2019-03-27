@@ -1,0 +1,21 @@
+<div class="about__reviews__block is--@@type">
+    <div class="about__reviews__block__name">
+        @@name
+        @@if(type == 'big') {
+            <a href="@@vk_url" target="_blank">
+                @@include('../../items/svg.html', {"name": "vk"})
+            </a>
+        }
+    </div>
+    <div class="about__reviews__block__project">@@project</div>
+    <div class="about__reviews__block__review">@@review</div>
+    @@if(type == 'big') {
+        <div class="about__reviews__block__original"><a href="img/review.jpg" data-fancybox="review@@id" data-caption="@@name | @@date">Оригинал</a></div>
+    }
+    <div class="about__reviews__block__footer">
+        <div class="about__reviews__block__footer__link">
+            <a href="@@pages.review">Читать полностью</a>
+        </div>
+        <div class="about__reviews__block__footer__date">@@date</div>
+    </div>
+</div>

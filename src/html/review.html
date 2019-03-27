@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('main/head.html', {"title": "Отзывы"})
+</head>
+<body>
+    @@include('main/navbar.html', {
+        "type": "dark",
+        "preloader": "small"
+    })
+    <main class="__ispadding">
+        @@include('pages/simple/simple.review.main.html')
+    </main>
+    @@include('main/footer.html')
+</body>
+</html>

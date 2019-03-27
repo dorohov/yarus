@@ -1,0 +1,279 @@
+.blog {
+    &__inner {
+        @extend .container;
+    }
+    &__top {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin-bottom: 45px;
+    }
+    &__heading {
+        .heading {
+            margin-bottom: 0;
+        }
+    }
+    &__menu {
+        ul {
+            display: flex;
+            li {
+                margin-left: 50px;
+                a,
+                span {
+                    font-size: 14px;
+                    line-height: 18px;
+                    color: $dark-text-color;
+                    text-transform: uppercase;
+                }
+                a {
+                    font-weight: 300;
+                }
+                span {
+                    font-weight: 800;
+                }
+            }
+        }
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+    }
+    &__card {
+        max-width: 33.3333333%;
+        width: 100%;
+        padding: 15px;
+        &:hover {
+            .blog {
+                &__card {
+                    &__content {
+                        background: rgba(#fff, .7);
+                        &__link {
+                            span {
+                                &::after {
+                                    right: -10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &__inner {
+            display: block;
+            position: relative;
+        }
+        &__label {
+            position: absolute;
+            padding: 5px 15px;
+            background: #fff;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 19px;
+            color: $dark-text-color;
+            top: 10%;
+            left: 10%;
+        }
+        &__content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80%;
+            background: rgba(#fff, .5);
+            padding: 7% 8%;
+            transition: .25s all ease;
+            &__title {
+                font-weight: 800;
+                color: $dark-text-color;
+                font-size: 24px;
+                line-height: 26px;
+                min-height: 55px;
+                margin-bottom: 20px;
+            }
+            &__link {
+                span {
+                    font-weight: 300;
+                    font-size: 24px;
+                    line-height: 25px;
+                    color: $dark-text-color;
+                    position: relative;
+                    padding-right: 40px;
+                    &::after {
+                        content: '';
+                        height: 1px;
+                        width: 32px;
+                        background: $dark-bg-color;
+                        position: absolute;
+                        top: 50%;
+                        right: 0;
+                        transition: .25s all ease;
+                    }
+                }
+            }
+        }
+    }
+    &__btn {
+        text-align: center;
+        padding-top: 50px;
+    }
+    &__article {
+        margin-bottom: 200px;
+        &__line {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 110px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &.is--left {
+                .blog {
+                    &__article {
+                        &__line {
+                            &__right {
+                                padding-left: 60px;
+                            }
+                        }
+                    }
+                }
+            }
+            &.is--right {
+                flex-flow: wrap;
+                .blog {
+                    &__article {
+                        &__line {
+                            &__left {
+                                order: 1;
+                            }
+                            &__right {
+                                padding-right: 60px;
+                            }
+                        }
+                    }
+                }
+            }
+            &__left,
+            &__right {
+                max-width: 50%;
+                width: 100%;
+            }
+            &__left {
+                background-size: cover;
+                background-position: center;
+            }
+            p {
+                font-weight: 300;
+                line-height: normal;
+                font-size: 18px;
+                color: $dark-text-color;
+                margin: 0 0 30px 0;
+            }
+        }
+    }
+    &__like {
+        &__list {
+            margin: 0 -15px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+}
+
+@media (max-width: $resp1200) {
+    .blog {
+        &__card {
+            max-width: 50%;
+            &__content {
+                &__title {
+                    font-size: 20px;
+                    line-height: 22px;
+                    min-height: 45px;
+                }
+                &__link {
+                    span {
+                        font-size: 18px;
+                        padding-right: 30px;
+                        &::after {
+                            width: 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $resp1025) {
+    .blog {
+        &__article {
+            &__line {
+                &__left {
+                    max-width: 30%;
+                }
+                &__right {
+                    max-width: 70%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $resp768) {
+    .blog {
+        &__top {
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        &__heading {
+            margin-bottom: 5px;
+        }
+        &__menu {
+            width: 100%;
+            ul {
+                flex-wrap: wrap;
+                li {
+                    margin: 15px 15px 0 0;
+                }
+            }
+        }
+        &__card {
+            max-width: 100%;
+            &__label {
+                top: 5%;
+                left: 5%;
+                font-size: 15px;
+            }
+            &__content {
+                padding: 5% 4%;
+                background: rgba(#fff, .7);
+                &__title {
+                    min-height: 0;
+                    font-size: 16px;
+                    line-height: 18px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        &__article {
+            margin-bottom: 50px;
+            &__line {
+                flex-wrap: wrap;
+                margin-bottom: 40px;
+                &.is--right {
+                    flex-flow: wrap-reverse;
+                }
+                &__left,
+                &__right {
+                    max-width: 100%;
+                    padding: 0 !important;
+                }
+                &__left {
+                    height: 200px;
+                    margin-bottom: 40px;
+                }
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

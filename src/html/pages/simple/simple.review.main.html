@@ -1,0 +1,40 @@
+<div class="reviews page">
+    <div class="reviews__inner">
+        <div class="reviews__current">
+            <div class="reviews__current__left">
+                @@include('../../items/breadcrumbs.html', {
+                    "list": [
+                        {
+                            "title": "Главная",
+                            "url": "@@pages.index"
+                        }
+                    ],
+                    "current": "Отзывы"
+                })
+                @@include('../../items/heading.html', {
+                    "text": "Альбина Самойлова",
+                    "align": "left"
+                })
+                <div class="reviews__current__left__project">Дизайнерский ремонт салона <br> красоты «Под ключ»</div>
+                <div class="reviews__current__left__review">
+                    <p>В студию ремонта «Ярус» я обратилась с непростой задачей: в максимально короткий срок(2 месяца) сделать высококачественный ремонт на 150 м2. После приглашения на объект различных бригад и мастеров я остановила свой выбор на студии «Ярус». Ребята сделали полную перепланировку помещения,переделали санузел и электричество,соблюдая все технические требования.Качественно выполнили черновую и косметическую отделку.Выражаю огромную благодарность за терпение и понимание Александру Дорохову и прорабу Валерию.Вы учли все мои пожелания.Спасибо за аккуратность в работе и профессиональный подход.Теперь буду обращаться к вам постоянно.</p>
+                </div>
+                <div class="reviews__current__left__vk">
+                    <a href="https://vk.com" target="_blank">
+                        @@include('../../items/svg.html', {"name": "vk"})
+                    </a>
+                </div>
+                <div class="reviews__current__left__original">
+                    <a href="#">Оригинал</a>
+                </div>
+            </div>
+            <div class="reviews__current__right">
+                <a href="@@pages.work_complete" class="reviews__current__right__link" style="background-image: url(img/review_project.jpg);">
+                    <div class="reviews__current__right__link__text">
+                        <span>Посмотреть проект</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

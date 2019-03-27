@@ -1,0 +1,84 @@
+<div class="page blog">
+    <div class="blog__inner">
+        <div class="blog__top">
+            <div class="blog__heading">
+                @@include('../../items/breadcrumbs.html', {
+                    "list": [
+                        {
+                            "title": "Главная",
+                            "url": "@@pages.index"
+                        }
+                    ],
+                    "current": "Блог"
+                })
+                @@include('../../items/heading.html', {
+                    "text": "Блог",
+                    "align": "left"
+                })
+            </div>
+            <div class="blog__menu">
+                <ul>
+                    <li><span>Дизайн</span></li>
+                    <li><a href="#">Ремонт</a></li>
+                    <li><a href="#">Советы</a></li>
+                    <li><a href="#">Стили</a></li>
+                    <li><a href="#">События</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="blog__list">
+            @@include('simple.blog.card.html', {
+                "img": "blog1.jpg",
+                "label": "Советы",
+                "title": "Ремонт: на чем экономить не стоит?"
+            })
+            @@include('simple.blog.card.html', {
+                "img": "blog2.jpg",
+                "label": "Советы",
+                "title": "Ремонт: на чем можно сэкономить?"
+            })
+            @@include('simple.blog.card.html', {
+                "img": "blog3.jpg",
+                "label": "Советы",
+                "title": "Авторский ремонт. Причины популярности"
+            })
+            @@include('simple.blog.card.html', {
+                "img": "blog4.jpg",
+                "label": "Стили",
+                "title": "Постмодерн"
+            })
+            @@include('simple.blog.card.html', {
+                "img": "blog5.jpg",
+                "label": "Стили",
+                "title": "Поп-арт"
+            })
+            @@include('simple.blog.card.html', {
+                "img": "blog6.jpg",
+                "label": "События",
+                "title": "Мероприятие KERAMA MARAZZI"
+            })
+            @@include('simple.blog.card.html', {
+                "img": "blog7.jpg",
+                "label": "Стили",
+                "title": "Прованс"
+            })
+            @@include('simple.blog.card.html', {
+                "img": "blog8.jpg",
+                "label": "Стили",
+                "title": "Кантри"
+            })
+            @@include('simple.blog.card.html', {
+                "img": "blog9.jpg",
+                "label": "Стили",
+                "title": "Хай-тек"
+            })
+        </div>
+        <div class="blog__btn">
+            @@include('../../items/button.html', {
+                "color": "default",
+                "type": "submit",
+                "text": "Показать еще"
+            })
+        </div>
+    </div>
+</div>
