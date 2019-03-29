@@ -12,7 +12,14 @@ body {
     }
     &.is--mobile-menu {
         .navbar__mobile {
+            visibility: visible;
+            opacity: 1;
             transform: none;
+            height: 100vh;
+            &__menu,
+            &__phone {
+                transform: none;
+            }
         }
     }
 }
@@ -40,6 +47,10 @@ img {
 img,
 svg {
     vertical-align: middle;
+}
+
+.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before {
+    height: 2px;
 }
 
 #overlay {

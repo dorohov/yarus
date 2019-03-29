@@ -95,11 +95,13 @@
                         </div>
                         <div class="banner__text__btn">
 
-                            <a href="#" class="btn is--inverted">
+
+
+
+
+                            <a href="#main_form" class="btn is--inverted __is--anchor">
                                 <span>Оставить заявку</span>
                             </a>
-
-
 
                         </div>
                     </div>
@@ -202,6 +204,8 @@
                                             <span>Продолжить</span>
                                         </button>
 
+
+
                                     </div>
                                 </div>
                             </div>
@@ -251,6 +255,8 @@
                                             <span>Продолжить</span>
                                         </button>
 
+
+
                                     </div>
                                     <div class="calculator__btn is--prev">
                                         <a>Вернуться назад</a>
@@ -274,6 +280,8 @@
                                             <span>Отправить</span>
                                         </button>
 
+
+
                                     </div>
                                     <div class="calculator__btn is--prev">
                                         <a>Вернуться назад</a>
@@ -281,6 +289,7 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="calculator__right__error"></div>
                     </div>
                 </div>
             </div>
@@ -409,6 +418,7 @@
                         <div class="heading is--left">Наше портфолио</div>
 
 
+
                     </div>
                     <div class="portfolio__menu">
                         <div class="portfolio__menu__tabs">
@@ -503,23 +513,25 @@
 
 
 
+
+
                 </div>
 
             </div>
         </div>
-        <div class="slide form">
+        <div class="slide form" id="main_form">
             <div class="form__heading">
                 <div class="heading is--center">Получить консультацию</div>
             </div>
             <form class="form__inner">
                 <div class="form__group is--border">
-                    <input type="text" placeholder="Ваше имя">
+                    <input type="text" placeholder="Ваше имя" required data-parsley-no-focus>
                 </div>
                 <div class="form__group is--border">
-                    <input type="text" placeholder="Ваш e-mail или телефон">
+                    <input type="text" placeholder="Ваш e-mail или телефон" required data-parsley-no-focus>
                 </div>
                 <div class="form__group is--border">
-                    <input type="text" placeholder="Пару слов о задаче">
+                    <input type="text" placeholder="Пару слов о задаче" required data-parsley-no-focus>
                 </div>
                 <div class="form__submit">
                     <div class="form__submit__btn">
@@ -529,6 +541,8 @@
                         <button type="submit" class="btn is--default">
                             <span>Отправить</span>
                         </button>
+
+
 
                     </div>
                     <div class="form__submit__text">
@@ -629,17 +643,12 @@
         <div class="modal__heading">Заявка принята!</div>
         <div class="modal__desc">Наши менеджеры скоро свяжутся с вами.</div>
     </div>
-    <script src="dist/js/jquery-3.3.1.min.js"></script>
-    <script src="dist/js/svg4everybody.min.js"></script>
-    <script src="dist/js/jquery.min.js"></script>
-    <script src="dist/js/jquery.modal.min.js"></script>
-    <script src="dist/js/slick.min.js"></script>
-    <script src="dist/js/jquery.fancybox.min.js"></script>
-    <script src="dist/js/main.js"></script>
+    <script src="dist/js/bundle-min.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANLxdBSU8fJGR5IzCxzgTbVTdgOsJXcq4&callback=initMap"></script>
     <script>
         svg4everybody();
     </script>
+    <script src="dist/js/image_loading.js"></script>
 </body>
 
 </html>

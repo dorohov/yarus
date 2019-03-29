@@ -81,6 +81,7 @@
             display: flex;
             justify-content: space-between;
             &__label {
+                margin-bottom: 20px;
                 span {
                     display: block;
                     padding: 10px 20px;
@@ -374,6 +375,14 @@
             line-height: 34px;
         }
         &__right {
+            &__worklist {
+                ul {
+                    li {
+                        font-size: 16px;
+                        line-height: 18px;
+                    }
+                }
+            }
             &__desc {
                 p {
                     font-size: 16px;
@@ -416,10 +425,12 @@
                 }
                 &__label {
                     bottom: auto;
-                    top: 60%;
+                    top: 0;
                     &__inner {
                         font-size: 16px;
                         padding: 7px 14px;
+                        width: 100%;
+                        text-align: center;
                     }
                 }
             }

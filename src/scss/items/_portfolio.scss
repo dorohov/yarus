@@ -215,7 +215,7 @@
         }
         &__overlay {
             width: 85%;
-            height: 85%;
+            height: 50%;
         }
     }
 }
@@ -224,9 +224,6 @@
     .portfolio {
         &__top {
             margin-bottom: 30px;
-        }
-        &__main {
-            
         }
         &__menu {
             flex-wrap: wrap;
@@ -245,16 +242,19 @@
             }
         }
         &__block {
-            max-height: 200px;
-            min-height: 200px;
+            max-height: 250px;
+            min-height: 250px;
         }
         &__text {
             padding-left: 15px;
             padding-bottom: 15px;
+            max-width: 250px;
         }
         &__title {
             font-size: 24px;
             line-height: 24px;
+            max-width: 310px;
+            margin-bottom: 10px;
         }
     }
 }

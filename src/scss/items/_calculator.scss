@@ -71,6 +71,15 @@
             color: $dark-text-color;
             margin-bottom: 40px;
         }
+        &__error {
+            padding-top: 20px;
+            color: $primary-color;
+            opacity: 0;
+            transition: .25s all ease;
+            &.is--active {
+                opacity: 1;
+            }
+        }
         &__step {
             display: none;
             &.is--active {

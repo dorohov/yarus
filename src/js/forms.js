@@ -10,5 +10,7 @@
             $(this).closest('.form__group.is--border').removeClass('is--focus')
         })
 
+        $('form').parsley()
+
     })
 })(jQuery);

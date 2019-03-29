@@ -1,0 +1,35 @@
+<div class="working__block is--@@align">
+    <div class="working__block__left">
+        <div class="working__block__carousel">
+            <div class="working__block__carousel__slider">
+                <div class="working__block__carousel__list" data-carouselid="@@carousel_id">
+                    @@for(var i = 0; i < photos.length; i++) {
+                        <div class="working__block__carousel__item">
+                            <img src="img/placeholder.jpg" data-src="img/`+photos[i]+`" alt="" class="lazy">
+                        </div>
+                    }
+                </div>
+                <div class="working__block__carousel__controls">
+                    <button class="is--prev">
+                        @@include('../../items/svg.html', {"name": "carousel_arrow_sm"})
+                    </button>
+                    <button class="is--next">
+                        @@include('../../items/svg.html', {"name": "carousel_arrow_sm"})
+                    </button>
+                </div>
+            </div>
+            <div class="working__block__carousel__items">
+                <ul>
+                    @@for(var i = 1; i < photos.length; i++) {
+                        <li data-carouselid="@@carousel_id" data-itemid="`+i+`" class="__working-nav-item">
+                            <img src="img/placeholder.jpg" data-src="img/`+photos[i]+`" alt="" class="lazy">
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="working__block__right">
+        <div class="working__block__text">@@text</div>
+    </div>
+</div>

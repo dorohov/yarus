@@ -1,0 +1,122 @@
+<div class="page working">
+    <div class="working__inner">
+        <div class="working__top">
+            <div class="working__heading">
+                @@include('../../items/breadcrumbs.html', {
+                    "list": [
+                        {
+                            "title": "Главная",
+                            "url": "@@pages.index"
+                        },
+                        {
+                            "title": "Дизайн и ремонт квартиры",
+                            "url": "@@pages.work_complete"
+                        }
+                    ],
+                    "current": "Ремонт квартиры по ул. 8 марта, 8, г. Орёл"
+                })
+                @@include('../../items/heading.html', {
+                    "text": "Ремонт квартиры по ул. 8 марта, 8, г. Орёл",
+                    "align": "left"
+                })
+            </div>
+        </div>
+        @@include('simple.working.block.html', {
+            "align": "left",
+            "carousel_id": 1,
+            "text": "Приступили к ремонтным работам. Производим демонтаж межкомнатных перегородок и электрики от «старой» планировки. Согласно проекту, это около 80% всех перегородок в квартире.",
+            "photos": [
+                "wp11.jpg",
+                "wp12.jpg",
+                "wp13.jpg",
+                "wp14.jpg",
+                "wp15.jpg",
+                "wp16.jpg",
+                "wp17.jpg"
+            ]
+        })
+        @@include('simple.working.block.html', {
+            "align": "right",
+            "carousel_id": 2,
+            "text": "Производим демонтаж межкомнатных перегородок и электрики от «старой» планировки, заканчиваем данный этап.",
+            "photos": [
+                "wp21.jpg",
+                "wp22.jpg",
+                "wp23.jpg",
+                "wp24.jpg",
+                "wp25.jpg",
+                "wp26.jpg"
+            ]
+        })
+        @@include('simple.working.block.html', {
+            "align": "left",
+            "carousel_id": 3,
+            "text": "Заменили старые оконные конструкции во всей квартире на новые REHAU 5K. Полностью разобрали и смонтировали заново большую лоджию.",
+            "photos": [
+                "wp31.jpg",
+                "wp32.jpg",
+                "wp33.jpg",
+                "wp34.jpg",
+                "wp35.jpg",
+                "wp36.jpg",
+                "wp37.jpg"
+            ]
+        })
+        @@include('simple.working.block.html', {
+            "align": "right",
+            "carousel_id": 4,
+            "text": "Завершили процесс демонтажа старых чугунных радиаторов. Приступили к скрытому монтажу труб системы отопления с заменой на полипропилен.",
+            "photos": [
+                "wp41.jpg",
+                "wp42.jpg",
+                "wp43.jpg",
+                "wp44.jpg",
+                "wp45.jpg",
+                "wp46.jpg",
+                "wp47.jpg"
+            ]
+        })
+        @@include('simple.working.block.html', {
+            "align": "left",
+            "carousel_id": 5,
+            "text": "Завершили возведение всех перегородок в квартире. Проемы для будущих дверей сделали высотой 230 см. Заканчиваем монтаж системы отопления.",
+            "photos": [
+                "wp51.jpg",
+                "wp52.jpg",
+                "wp53.jpg",
+                "wp54.jpg",
+                "wp55.jpg",
+                "wp56.jpg",
+                "wp57.jpg"
+            ]
+        })
+        @@include('simple.working.block.html', {
+            "align": "right",
+            "carousel_id": 6,
+            "text": "Произвели электромонтажные работы в квартире. Оконные откосы выполняются с применением специальной штукатурной сетки и перфорированных оцинкованных углов. Это обеспечивает защиту от трещин. Приступили к прокладке магистралей. ХВС, ГВС и канализации. Начаты работы по оштукатуриванию стен.",
+            "photos": [
+                "wp61.jpg",
+                "wp62.jpg",
+                "wp63.jpg",
+                "wp64.jpg",
+                "wp65.jpg",
+                "wp66.jpg",
+                "wp67.jpg"
+            ]
+        })
+        <div class="working__btn">
+            <div class="working__btn__text">
+                Вы можете наблюдать за ходом работ у нас в группе ВКонтакте
+            </div>
+            <div class="working__btn__btn">
+                @@include('../../items/button.html', {
+                    "color": "default",
+                    "type": "link",
+                    "text": "Посмотреть вконтакте",
+                    "href": "@@social.vk"
+                })
+            </div>
+        </div>
+    </div>
+</div>
+@@include('../../items/form.html', {"heading": "Нужна консультация?"})

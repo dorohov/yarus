@@ -1,4 +1,4 @@
-<div class="slide form">
+<div class="slide form" id="main_form">
     <div class="form__heading">
         @@include('heading.html', {
             "text": "@@heading",
@@ -7,13 +7,13 @@
     </div>
     <form class="form__inner">
         <div class="form__group is--border">
-            <input type="text" placeholder="Ваше имя">
+            <input type="text" placeholder="Ваше имя" required data-parsley-no-focus>
         </div>
         <div class="form__group is--border">
-            <input type="text" placeholder="Ваш e-mail или телефон">
+            <input type="text" placeholder="Ваш e-mail или телефон" required data-parsley-no-focus>
         </div>
         <div class="form__group is--border">
-            <input type="text" placeholder="Пару слов о задаче">
+            <input type="text" placeholder="Пару слов о задаче" required data-parsley-no-focus>
         </div>
         <div class="form__submit">
             <div class="form__submit__btn">

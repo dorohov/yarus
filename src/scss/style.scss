@@ -1,6 +1,7 @@
 @import "../../img/svg/sprite.scss";
 @import "hamburgers/hamburgers.scss";
 @import "normalize";
+@import "animate";
 @import "ie";
 @import "vars";
 @import "mixins";
@@ -25,4 +26,5 @@
 @import "items/pagination";
 @import "items/blog";
 @import "items/contacts";
+@import "items/working_process";
 @import "slick";

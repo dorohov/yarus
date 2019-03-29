@@ -144,13 +144,14 @@ function createBundleCss() {
 
 function createBundleJs() {
     return gulp.src([
-                './dist/js/jquery.visible.min.js',
+                './dist/js/jquery-3.3.1.min.js',
+                './dist/js/svg4everybody.min.js',
+                './dist/js/jquery.min.js',
+                './dist/js/jquery.modal.min.js',
                 './dist/js/slick.min.js',
                 './dist/js/jquery.fancybox.min.js',
-                './dist/js/svg4everybody.min.js',
                 './dist/js/parsley.min.js',
                 './dist/js/i18n/ru.js',
-                './dist/js/imask.js',
                 './dist/js/main.js'
             ])
             .pipe(sourcemaps.init())
@@ -173,14 +174,14 @@ gulp.task('build', function() {
     gulp.watch('src/html/**/*.html', gulp.series('html'))
     gulp.watch('src/scss/**/*.scss', gulp.series('css'))
     gulp.watch(assets.js, gulp.series('js'))
-    // gulp.watch('dist/js/main.js', gulp.series('createBundleJs'))
+    gulp.watch('dist/js/main.js', gulp.series('createBundleJs'))
     // gulp.watch('dist/css/style.css', gulp.series('createBundleCss'))
     gulp.watch(assets.svg, gulp.series('svgMap'))
     gulp.watch(assets.images, gulp.series('imageMinify'))
 })
 
 gulp.task('default', gulp.series(
-    gulp.parallel('html', 'css', 'js', 'svgMap', 'imageMinify'),
-    // gulp.parallel('html', 'css', 'js', 'createBundleJs', 'svgMap', 'imageMinify'),
+    // gulp.parallel('html', 'css', 'js', 'svgMap', 'imageMinify'),
+    gulp.parallel('html', 'css', 'js', 'createBundleJs', 'svgMap', 'imageMinify'),
     gulp.parallel('build', 'browser_sync')
 ))

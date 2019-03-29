@@ -20,9 +20,15 @@
         }
         <div class="portfolio__top">
             <div class="portfolio__heading">
-                @@if(type == 'portfolio') {
+                @@if(type == 'portfolio' && view == 'small') {
                     @@include('heading.html', {
                         "text": "Наше портфолио",
+                        "align": "left"
+                    })
+                }
+                @@if(type == 'portfolio' && view == 'all') {
+                    @@include('heading.html', {
+                        "text": "Наши работы",
                         "align": "left"
                     })
                 }

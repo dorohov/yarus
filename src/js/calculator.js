@@ -14,7 +14,18 @@
                 '2. Выберите тип ремонта:',
                 '3. Производится расчет стоимости ремонта, наш менеджер Вас подробно проконсультирует. Оставьте номер телефона для связи.'
             ],
-            titleBlock = $('.calculator__right__subtitle')
+            titleBlock = $('.calculator__right__subtitle'),
+            errorBlock = $('.calculator__right__error')
+
+        function setError(text) {
+            errorBlock.html(text)
+            errorBlock.addClass('is--active')
+        }
+
+        function clearError() {
+            errorBlock.removeClass('is--active')
+            errorBlock.html(' ')
+        }
 
         function setStep(num) {
             titleBlock.html(titles[current_step - 1])
@@ -25,6 +36,8 @@
         setStep(current_step)
 
         $('.calculator__btn button[type="submit"]').on('click', function(e) {
+
+            clearError()
             
             e.preventDefault()
 
@@ -41,6 +54,8 @@
                         current_step = 2
                         setStep(current_step)
                     }
+                }else {
+                    setError('Выберите тип дома, чтобы продолжить')
                 }
 
             }
@@ -55,13 +70,17 @@
                         step2_price = 12500
                     }
 
-                    if(step2_price > 0 && $('input[id="calc23"]').val() != null && $('input[id="calc23"]').val() != 0) {
+                    if(step2_price > 0 && $('input[id="calc23"]').val() != null && $('input[id="calc23"]').val() > 0) {
 
                         total = step1_price * step2_price * $('input[id="calc23"]').val()
                         $('input#calc31').val(total.toLocaleString('ru-RU') + ruble)
                         current_step = 3
                         setStep(current_step)
+                    }else {
+                        setError('Введите корректную площадь, чтобы продолжить')
                     }
+                }else {
+                    setError('Выберите тип ремонта, чтобы продолжить')
                 }
 
             }
@@ -80,6 +99,8 @@
                         }
                         }
                     }); 
+                }else {
+                    setError('Введите корректный номер телефона, чтобы продолжить')
                 }
                  
             }
@@ -89,6 +110,7 @@
         $('.calculator__btn.is--prev').on('click', function() {
             if(current_step > 0) current_step--
             setStep(current_step)
+            clearError()
         })
 
     })

@@ -74,6 +74,40 @@
     }
 }
 
+.parsley-errors-list.filled {
+    position: absolute;
+    top: calc(100% + 10px);
+    font-size: 15px;
+    border: 1px solid $dark-bg-color;
+    padding: 7px 14px;
+    background: #fff;
+    z-index: 99;
+    &:after,
+    &:before {
+        bottom: 100%;
+        left: 10%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+    
+    &:after {
+        border-color: rgba(255, 255, 255, 0);
+        border-bottom-color: #fff;
+        border-width: 4px;
+        margin-left: -4px;
+    }
+    &:before {
+        border-color: rgba(36, 34, 34, 0);
+        border-bottom-color: #242222;
+        border-width: 5px;
+	    margin-left: -5px;
+    }
+}
+
 @media (max-width: $resp768) {
     .form {
         &__group {
