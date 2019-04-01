@@ -312,8 +312,8 @@
 @media (max-width: 1600px) {
     .tcard {
         .heading {
-            font-size: 50px;
-            line-height: 50px;
+            font-size: 36px;
+            line-height: 40px;
             margin-bottom: 20px;
         }
         &__right {
@@ -328,6 +328,53 @@
                 margin-bottom: 20px;
                 &__breadcrumbs {
                     width: 100%;
+                }
+            }
+        }
+    }
+    .tcard {
+        &__right {
+            &__inner {
+                padding-right: 70px !important;
+                padding-left: 70px !important;
+            }
+            &__street {
+                margin-bottom: 20px !important;
+                font-size: 18px;
+            }
+            &__worklist {
+                margin-bottom: 20px !important;
+                ul {
+                    li {
+                        font-size: 16px !important;
+                    }
+                }
+            }
+            &__desc {
+                p {
+                    font-size: 16px !important;
+                }
+            }
+            &__btns {
+                .btn {
+                    font-size: 16px;
+                    line-height: 18px;
+                    padding: 15px 20px;
+                }
+            }
+            &__top {
+                &__label {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        &__left {
+            &__carousel {
+                &__label {
+                    &__inner {
+                        font-size: 16px;
+                        padding: 10px 20px;
+                    }
                 }
             }
         }
@@ -437,7 +484,7 @@
         }
         &__right {
             &__inner {
-                padding: 40px 30px;
+                padding: 40px 30px !important;
                 .heading {
                     font-size: 22px;
                     line-height: 26px;

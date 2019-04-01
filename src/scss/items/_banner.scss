@@ -51,6 +51,16 @@
     }
 }
 
+@media (max-width: 1440px) {
+    .banner {
+        &__text {
+            &__name {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
 @media (max-width: $resp1200) {
     .banner {
         &__left {
