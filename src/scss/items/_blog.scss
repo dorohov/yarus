@@ -1,6 +1,14 @@
 .blog {
     &__inner {
         @extend .container;
+        &.is--small {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            .blog__article {
+                margin-bottom: 150px;
+            }
+        }
     }
     &__top {
         display: flex;
@@ -129,6 +137,9 @@
             .is--image {
                 background-size: contain;
                 background-repeat: no-repeat;
+            }
+            &__img {
+                margin-bottom: 50px;
             }
             &.is--left {
                 .blog {
@@ -272,7 +283,7 @@
             }
         }
         &__article {
-            margin-bottom: 50px;
+            margin-bottom: 50px !important;
         }
     }
 }
