@@ -122,8 +122,13 @@
             display: flex;
             flex-wrap: wrap;
             margin-bottom: 110px;
+            align-items: center;
             &:last-child {
                 margin-bottom: 0;
+            }
+            .is--image {
+                background-size: contain;
+                background-repeat: no-repeat;
             }
             &.is--left {
                 .blog {
@@ -166,6 +171,9 @@
                 font-size: 18px;
                 color: $dark-text-color;
                 margin: 0 0 30px 0;
+                &:last-child {
+                    margin-bottom: 0;
+                }
             }
         }
     }
@@ -206,11 +214,21 @@
     .blog {
         &__article {
             &__line {
-                &__left {
-                    max-width: 30%;
+                flex-wrap: wrap;
+                margin-bottom: 40px;
+                &.is--right {
+                    flex-flow: wrap-reverse;
                 }
+                &__left,
                 &__right {
-                    max-width: 70%;
+                    max-width: 100%;
+                    padding: 0 !important;
+                }
+                &__left {
+                    margin-bottom: 40px;
+                }
+                p {
+                    font-size: 16px;
                 }
             }
         }
@@ -255,25 +273,6 @@
         }
         &__article {
             margin-bottom: 50px;
-            &__line {
-                flex-wrap: wrap;
-                margin-bottom: 40px;
-                &.is--right {
-                    flex-flow: wrap-reverse;
-                }
-                &__left,
-                &__right {
-                    max-width: 100%;
-                    padding: 0 !important;
-                }
-                &__left {
-                    height: 200px;
-                    margin-bottom: 40px;
-                }
-                p {
-                    font-size: 16px;
-                }
-            }
         }
     }
 }
