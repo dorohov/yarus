@@ -1,0 +1,24 @@
+<div class="err">
+    <div class="err__inner">
+        <div class="err__error">
+            <div class="err__error__num">4</div>
+            <div class="err__error__img">
+                <img src="img/gear.png" alt="">
+            </div>
+            <div class="err__error__num">4</div>
+        </div>
+        <div class="err__info">
+            <div class="err__info__heading">Страница не найдена!</div>
+            <div class="err__info__desc">Запрашиваемая Вами страница не найдена <br>
+                или никогда не существовала</div>
+        </div>
+        <div class="err__btn">
+            @@include('../../items/button.html', {
+                "color": "default",
+                "type": "link",
+                "href": "@@pages.index",
+                "text": "на главную"
+            })
+        </div>
+    </div>
+</div>
