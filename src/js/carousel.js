@@ -10,7 +10,7 @@
         $('.about__slides__block__carousel__inner').each(function() {
             $(this).slick({
                 prevArrow: $(this).parent().find('button.is--prev'),
-                nextArrow: $(this).parent().find('button.is--next')
+                nextArrow: $(this).parent().find('button.is--next'),
             })
             
         })
@@ -35,7 +35,8 @@
         $('.working__block__carousel__list').each(function() {
             $(this).slick({
                 prevArrow: $(this).parent().find('button.is--prev'),
-                nextArrow: $(this).parent().find('button.is--next')
+                nextArrow: $(this).parent().find('button.is--next'),
+
             })
         })
 
@@ -52,5 +53,8 @@
                 setWorkingSlide(carousel_id, item_id)
         })
 
+        $('.working__block__carousel__item.slick-cloned').removeAttr('data-fancybox')
+
+        
     })
 })(jQuery);

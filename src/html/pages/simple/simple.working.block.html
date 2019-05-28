@@ -4,9 +4,9 @@
             <div class="working__block__carousel__slider">
                 <div class="working__block__carousel__list" data-carouselid="@@carousel_id">
                     @@for(var i = 0; i < photos.length; i++) {
-                        <div class="working__block__carousel__item">
-                            <img src="img/placeholder.jpg" data-src="img/`+photos[i]+`" alt="" class="lazy">
-                        </div>
+                        <a class="working__block__carousel__item" data-fancybox="gallery@@carousel_id" href="img/`+photos[i]+`">
+                            <img src="img/`+photos[i]+`">
+                        </a>
                     }
                 </div>
                 <div class="working__block__carousel__controls">
