@@ -12,9 +12,19 @@
                 prevArrow: $(this).parent().find('button.is--prev'),
                 nextArrow: $(this).parent().find('button.is--next'),
             })
-            
         })
 
+        $('.about__slides__block__carousel__inner').on('setPosition', function(e) {
+            var currentSliderId = $(this)[0].slick.currentSlide
+            var currentSlide = $($(this)[0].slick.$slides[currentSliderId])
+            var thisId = currentSlide.attr('data-id')
+            var thisTitle = currentSlide.attr('data-title');
+            var thisContent = currentSlide.attr('data-desc');
+            var thisTitleBlock = $('.about__slides__block__text__title[data-id="' + thisId + '"]')
+            var thisContentBlock = $('.about__slides__block__text__desc[data-id="' + thisId + '"]')
+            thisTitleBlock.html(thisTitle)
+            thisContentBlock.html(thisContent)
+        })
         var slickClickAccess = true
 
         function getWorkingSlider(id) {
