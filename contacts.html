@@ -87,7 +87,29 @@
         <div class="contacts">
             <div class="contacts__inner">
                 <div class="contacts__map">
-                    <div id="map"></div>
+                    <div id="map">
+                        <a class="dg-widget-link" href="http://2gis.ru/orel/firm/70000001029055482/center/36.058715,52.974253/zoom/16?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">Посмотреть на карте Орла</a>
+                        <div class="dg-widget-link"><a href="http://2gis.ru/orel/center/36.058715,52.974253/zoom/16/routeTab/rsType/bus/to/36.058715,52.974253╎Ярус, студия ремонта?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=route">Найти проезд до Ярус, студия ремонта</a></div>
+                        <script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script>
+                        <script charset="utf-8">
+                            new DGWidgetLoader({
+                                "width": 640,
+                                "height": 600,
+                                "borderColor": "#a3a3a3",
+                                "pos": {
+                                    "lat": 52.974253,
+                                    "lon": 36.058715,
+                                    "zoom": 16
+                                },
+                                "opt": {
+                                    "city": "orel"
+                                },
+                                "org": [{
+                                    "id": "70000001029055482"
+                                }]
+                            });
+                        </script><noscript style="color:#c00;font-size:16px;font-weight:bold;">Виджет карты использует JavaScript. Включите его в настройках вашего браузера.</noscript>
+                    </div>
                 </div>
                 <div class="contacts__info">
                     <div class="contacts__info__top">
@@ -243,7 +265,7 @@
         <div class="modal__desc">Наши менеджеры скоро свяжутся с вами.</div>
     </div>
     <script src="dist/js/bundle-min.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANLxdBSU8fJGR5IzCxzgTbVTdgOsJXcq4&callback=initMap"></script>
+    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANLxdBSU8fJGR5IzCxzgTbVTdgOsJXcq4&callback=initMap"></script> -->
     <script>
         svg4everybody();
     </script>

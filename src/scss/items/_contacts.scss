@@ -13,8 +13,10 @@
         
     }
     &__info {
+        background: #F3F3F3;
         &__top {
             padding: 7% 0 0 15%;
+            background: #fff;
             &__heading {
                 margin-bottom: 40px;
                 .heading {
@@ -109,6 +111,13 @@
 
 #map {
     min-height: 100%;
+    iframe {
+        width: 100%;
+        height: 100%;
+        border: none !important;
+        min-height: 100%;
+        visibility: top;
+    }
 }
 
 @media (max-width: $resp1200) {
@@ -129,13 +138,15 @@
             flex-flow: wrap;
         }
         &__map {
-            min-height: 300px;
             height: 100%;
             max-width: 100%;
             order: 1;
             #map {
                 min-height: 300px;
                 height: 100%;
+                iframe {
+                    min-height: 300px !important;
+                }
             }
         }
         &__info {
