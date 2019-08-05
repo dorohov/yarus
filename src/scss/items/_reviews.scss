@@ -4,9 +4,13 @@
     }
     &__list {
         margin: 0 -30px;
-        justify-content: space-between;
         margin-bottom: 80px;
         display: flex;
+        flex-wrap: wrap;
+        .about__reviews__block {
+            max-width: 33.33333%;
+            margin-bottom: 110px;
+        }
     }
     &__current {
         display: flex;

@@ -144,7 +144,6 @@ function createBundleCss() {
 
 function createBundleJs() {
     return gulp.src([
-                './dist/js/jquery-3.3.1.min.js',
                 './dist/js/svg4everybody.min.js',
                 './dist/js/jquery.min.js',
                 './dist/js/jquery.modal.min.js',
@@ -152,6 +151,7 @@ function createBundleJs() {
                 './dist/js/jquery.fancybox.min.js',
                 './dist/js/parsley.min.js',
                 './dist/js/i18n/ru.js',
+                './dist/js/swiper.min.js',
                 './dist/js/main.js'
             ])
             .pipe(sourcemaps.init())

@@ -35,24 +35,21 @@
             }
         }
         &__carousel {
-            &__slider {
-                margin-bottom: 20px;
-                position: relative;
-            }
+            position: relative;
             &__controls {
                 button {
-                    background: #fff;
-                    border: 0;
-                    border-radius: 0;
-                    width: 58px;
-                    height: 58px;
-                    padding: 0;
-                    cursor: pointer;
-                    outline: none;
                     position: absolute;
                     top: 50%;
+                    z-index: 10;
+                    width: 58px;
+                    height: 58px;
+                    background: #fff;
+                    border: none;
+                    padding: 0;
                     margin-top: -30px;
                     transition: .25s all ease;
+                    outline: none;
+                    cursor: pointer;
                     &:hover {
                         background: $primary-color;
                         svg {
@@ -61,37 +58,29 @@
                     }
                     svg {
                         transition: .25s all ease;
-                        fill: $dark-bg-color;
                     }
                     &.is--prev {
                         left: 0;
                     }
                     &.is--next {
                         right: 0;
-                        svg {
-                            transform: rotate(180deg);
-                        }
+                        transform: rotate(180deg);
                     }
                 }
             }
-            &__items {
-                overflow: hidden;
-                ul {
-                    display: flex;
-                    margin: 0 -10px;
-                    li {
-                        cursor: pointer;
-                        margin: 0 10px;
-                        width: 100%;
-                        img {
-                            border: 3px solid transparent;
-                        }
-                        &.is--active {
-                            img {
-                                border: 3px solid $dark-bg-color;
-                            }
-                        }
+            .gallery-top {
+                margin-bottom: 24px;
+            }
+            .gallery-thumbs {
+                .swiper-slide-thumb-active {
+                    img {
+                        border-color: $dark-text-color;
                     }
+                }
+                img {
+                    border: 3px solid transparent;
+                    cursor: pointer;
+                    transition: .25s all ease;
                 }
             }
         }
@@ -108,8 +97,30 @@
     }
 }
 
+@media (max-width: 1200px) {
+    .working {
+        &__block {
+            &__carousel {
+                .gallery-top {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: $resp768) {
     .working {
+        .working__block__carousel {
+            margin-bottom: 40px;
+            &__controls {
+                button {
+                    width: 40px;
+                    height: 40px;
+                    margin-top: -20px;
+                }
+            }
+        }
         &__block {
             flex-wrap: wrap;
             margin-bottom: 50px;
@@ -132,16 +143,7 @@
                 font-size: 16px;
             }
             &__carousel {
-                &__controls {
-                    button {
-                        width: 35px;
-                        height: 35px;
-                        margin-top: -5%;
-                        svg {
-                            width: 10px;
-                        }
-                    }
-                }
+                
             }
         }
         &__btn {

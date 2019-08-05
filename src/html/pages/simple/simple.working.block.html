@@ -1,12 +1,14 @@
 <div class="working__block is--@@align">
     <div class="working__block__left">
         <div class="working__block__carousel">
-            <div class="working__block__carousel__slider">
-                <div class="working__block__carousel__list" data-carouselid="@@carousel_id">
+            <div class="swiper-container gallery-top">
+                <div class="swiper-wrapper">
                     @@for(var i = 0; i < photos.length; i++) {
-                        <a class="working__block__carousel__item" data-fancybox="gallery@@carousel_id" href="img/`+photos[i]+`">
-                            <img src="img/`+photos[i]+`">
-                        </a>
+                        <div class="swiper-slide">
+                            <a href="img/`+photos[i]+`" data-fancybox class="is-nc">
+                                <img src="img/`+photos[i]+`" alt="">
+                            </a>
+                        </div>
                     }
                 </div>
                 <div class="working__block__carousel__controls">
@@ -16,16 +18,16 @@
                     <button class="is--next">
                         @@include('../../items/svg.html', {"name": "carousel_arrow_sm"})
                     </button>
-                </div>
+                </div>                
             </div>
-            <div class="working__block__carousel__items">
-                <ul>
-                    @@for(var i = 1; i < photos.length; i++) {
-                        <li data-carouselid="@@carousel_id" data-itemid="`+i+`" class="__working-nav-item">
-                            <img src="img/placeholder.jpg" data-src="img/`+photos[i]+`" alt="" class="lazy">
-                        </li>
+            <div class="swiper-container gallery-thumbs">
+                <div class="swiper-wrapper">
+                    @@for(var i = 0; i < photos.length; i++) {
+                        <div class="swiper-slide">
+                            <img src="img/`+photos[i]+`" alt="">
+                        </div>
                     }
-                </ul>
+                </div>
             </div>
         </div>
     </div>

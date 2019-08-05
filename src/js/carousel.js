@@ -25,46 +25,68 @@
             thisTitleBlock.html(thisTitle)
             thisContentBlock.html(thisContent)
         })
-        var slickClickAccess = true
 
-        function getWorkingSlider(id) {
-            return '.working__block__carousel__list[data-carouselid="' + id + '"]'
-        }
+        // $('.working__block__carousel__list').each(function() {
+        //     $(this).slick({
+        //         prevArrow: $(this).parent().find('button.is--prev'),
+        //         nextArrow: $(this).parent().find('button.is--next'),
+        //         asNavFor: '.working__block__carousel__items ul',
+        //         infinite: false
 
-        function setWorkingSlide(carousel_id, item_id) {
-            if(slickClickAccess) {
-                $('.__working-nav-item').removeClass('is--active')
-                $('.__working-nav-item[data-carouselid="' + carousel_id + '"][data-itemid="' + item_id + '"]').addClass('is--active');
-                if(carousel_id && item_id) {
-                    $(getWorkingSlider(carousel_id)).slick('slickGoTo', item_id)
+        //     })
+        // })
+
+        // $('.working__block__carousel__item.slick-cloned').removeAttr('data-fancybox')
+
+        // $('.working__block__carousel__items ul').slick({
+        //     slidesToShow: 6,
+        //     asNavFor: '.working__block__carousel__list',
+        //     infinite: false,
+        //     prevArrow: '',
+        //     nextArrow: ''
+        // })
+
+        // $('.working__block__carousel__items ul li').on('click', function() {
+        //     var __item = {
+        //         id: $(this).data('itemid'),
+        //         carousel: $(this).data('carouselid')
+        //     }
+
+        //     $('.working__block__carousel__list[data-carouselid="' + __item.carousel + '"]').slick('slickGoTo', __item.id);
+
+        //     console.log(__item)
+        // })
+
+        for(var i = 0; i < $('.working__block__left').length; i++) {
+
+            var block = $('.working__block__left')[i]
+            var galleryThumbs = new Swiper($(block).find('.gallery-thumbs') , {
+                spaceBetween: 24,
+                slidesPerView: 6,
+                freeMode: true,
+                watchSlidesVisibility: true,
+                watchSlidesProgress: true,
+                breakpoints: {
+                    1200: {
+                        spaceBetween: 10,
+                    },
+                    768: {
+                        slidesPerView: 4,
+                        spaceBetween: 5
+                    }
                 }
-                slickClickAccess = false
-            }
+            });
+            var galleryTop = new Swiper($(block).find('.gallery-top'), {
+                spaceBetween: 0,
+                navigation: {
+                    nextEl: $(block).find('.working__block__carousel__controls button.is--next'),
+                    prevEl: $(block).find('.working__block__carousel__controls button.is--prev'),
+                },
+                thumbs: {
+                    swiper: galleryThumbs
+                }
+            });
         }
-
-        $('.working__block__carousel__list').each(function() {
-            $(this).slick({
-                prevArrow: $(this).parent().find('button.is--prev'),
-                nextArrow: $(this).parent().find('button.is--next'),
-
-            })
-        })
-
-        $('.working__block__carousel__list').on('afterChange', function(event, slick, currentSlide, nextSlide) {
-            var carousel_id = $(this).data('carouselid')
-            setWorkingSlide(carousel_id, currentSlide)
-            slickClickAccess = true
-        })
-
-        $('.__working-nav-item').on('click', function() {
-            var carousel_id = $(this).data('carouselid'),
-                item_id = $(this).data('itemid')
-
-                setWorkingSlide(carousel_id, item_id)
-        })
-
-        $('.working__block__carousel__item.slick-cloned').removeAttr('data-fancybox')
-
         
     })
 })(jQuery);
