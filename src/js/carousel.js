@@ -66,6 +66,7 @@
                 freeMode: true,
                 watchSlidesVisibility: true,
                 watchSlidesProgress: true,
+                lazy: true,
                 breakpoints: {
                     1200: {
                         spaceBetween: 10,
@@ -78,6 +79,7 @@
             });
             var galleryTop = new Swiper($(block).find('.gallery-top'), {
                 spaceBetween: 0,
+                lazy: true,
                 navigation: {
                     nextEl: $(block).find('.working__block__carousel__controls button.is--next'),
                     prevEl: $(block).find('.working__block__carousel__controls button.is--prev'),
