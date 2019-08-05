@@ -6,7 +6,7 @@
                     @@for(var i = 0; i < photos.length; i++) {
                         <div class="swiper-slide">
                             <a href="img/`+photos[i]+`" data-fancybox class="is-nc">
-                                <img src="img/`+photos[i]+`" alt="">
+                                <img src="img/placeholder.jpg" data-src="img/`+photos[i]+`" alt="" class="lazy">
                             </a>
                         </div>
                     }
@@ -24,7 +24,7 @@
                 <div class="swiper-wrapper">
                     @@for(var i = 0; i < photos.length; i++) {
                         <div class="swiper-slide">
-                            <img src="img/`+photos[i]+`" alt="">
+                            <img src="img/placeholder.jpg" data-src="img/`+photos[i]+`" alt="" class="lazy">
                         </div>
                     }
                 </div>
