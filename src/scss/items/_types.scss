@@ -80,7 +80,12 @@
         &__top {
             display: flex;
             justify-content: space-between;
-            align-items: flex-end;
+            align-items: center;
+            &__breadcrumbs {
+                .breadcrumbs {
+                    margin-bottom: 20px;
+                }
+            }
             &__label {
                 margin-bottom: 20px;
                 span {
