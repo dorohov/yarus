@@ -96,9 +96,13 @@
                 & + .calculator__radiobox__label {
                     border-color: $primary-color;
                     .calculator__radiobox__label__title {
+                        color: #b38144;
                     }
                     .calculator__radiobox__label__check {
                         opacity: 1;
+                    }
+                    .calculator__radiobox__label__icon svg {
+                        fill: #b38144;
                     }
                 } 
             }
@@ -122,6 +126,11 @@
                 transition: .25s all ease;
                 svg {
                     fill: $primary-color;
+                }
+            }
+            &__icon {
+                svg {
+                    transition: .25s all ease;
                 }
             }
         }
@@ -181,6 +190,12 @@
             }
             &:focus {
                 border-color: #DFDFDF;
+                &::placeholder {
+                    color: transparent;
+                }
+            }
+            &::placeholder {
+                transition: .25s all ease;
             }
         }
     }

@@ -217,21 +217,13 @@
             padding: 0 30px;
             &__name {
                 font-weight: 800;
-                font-size: 24px;
+                font-size: 36px;
                 line-height: 24px;
                 color: $dark-text-color;
                 margin-bottom: 15px;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                .svg.is--vk {
-                    width: 20px;
-                    height: 20px;
-                    transition: .25s all ease;
-                    &:hover {
-                        fill: $primary-color;
-                    }
-                }
             }
             &__project {
                 font-weight: 800;
@@ -257,37 +249,21 @@
                     line-height: 25px;
                     color: $primary-color;
                 }
+                .svg.is--vk {
+                    width: 20px;
+                    height: 20px;
+                    transition: .25s all ease;
+                    fill: $primary-color;
+                    margin-left: 20px;
+                    &:hover {
+                        fill: #000;
+                    }
+                }
             }
             &__footer {
                 display: flex;
-                align-items: flex-end;
+                align-items: center;
                 justify-content: space-between;
-                &__link {
-                    a {
-                        display: block;
-                        color: $dark-text-color;
-                        font-weight: 300;
-                        font-size: 24px;
-                        line-height: 25px;
-                        padding-right: 45px;
-                        position: relative;
-                        &::after {
-                            content: '';
-                            height: 1px;
-                            width: 32px;
-                            background: $dark-bg-color;
-                            position: absolute;
-                            top: 50%;
-                            right: 0;
-                            transition: .25s all ease;
-                        }
-                        &:hover {
-                            &::after {
-                                right: -10px;
-                            }
-                        }
-                    }
-                }
                 &__date {
                     color: $dark-text-color;
                     font-weight: 300;
@@ -341,12 +317,8 @@
             &__block {
                 max-width: 50%;
                 margin-bottom: 60px;
-                &__footer {
-                    &__link {
-                        a {
-                            // font-size: 18px;
-                        }
-                    }
+                &__name {
+                    font-size: 24px;
                 }
             }
         }
@@ -414,11 +386,6 @@
         &__reviews {
             &__block {
                 &__footer {
-                    &__link {
-                        a {
-                            font-size: 18px;
-                        }
-                    }
                 }
             }
         }
@@ -519,16 +486,19 @@
             }
             &__block {
                 max-width: 100%;
-                margin-bottom: 60px;
+                margin-bottom: 60px !important;
                 &__review,
                 &__project {
                     min-height: 0;
+                    br {
+                        display: none;
+                    }
                 }
                 &__project {
                     margin-bottom: 20px;
                 }
                 &__original {
-                    margin-bottom: 10px;
+                    margin-bottom: 30px;
                     a {
                         font-size: 16px;
                     }
@@ -540,15 +510,7 @@
                     font-size: 16px;
                 }
                 &__footer {
-                    &__link {
-                        a {
-                            font-size: 16px;
-                            padding-right: 0;
-                            &::after {
-                                content: none;
-                            }
-                        }
-                    }
+                    
                 }
             }
         }
