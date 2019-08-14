@@ -6,6 +6,13 @@
     transition: .25s all ease;
     &.is--dark {
         background: $dark-bg-color;
+        .navbar {
+            &__city {
+                &__list {
+                    background: $dark-bg-color;
+                }
+            }
+        }
     }
     &__inner {
         height: 100%;
@@ -33,7 +40,7 @@
                     font-weight: 300;
                     font-size: 18px;
                     color: #fff;
-                    padding: 0 30px;
+                    padding: 0 27px;
                     transition: .25s all ease;
                     &:hover {
                         color: $primary-color;
@@ -42,6 +49,84 @@
                 &.is--active {
                     a {
                         color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+    &__city {
+        color: #fff;
+        max-width: 160px;
+        width: 100%;
+        position: relative;
+        margin: 0 auto;
+        &__label {
+            font-weight: 300;
+            font-size: 14px;
+            border: 1px solid #fff;
+            display: flex;
+            height: 42px;
+            align-items: center;
+            cursor: pointer;
+            padding: 0 20px;
+            position: relative;
+            user-select: none;
+            &::after {
+                content: url(../../img/navbar_city_arrow.svg);
+                right: 15px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+        &__list {
+            position: absolute;
+            border: 1px solid #fff;
+            padding: 7px 0;
+            width: 100%;
+            left: 0;
+            top: 100%;
+            margin-top: 10px;
+            transition: .25s all ease;
+            visibility: hidden;
+            opacity: 0;
+            ul {
+                li {
+                    position: relative;
+                    a {
+                        display: block;
+                        width: 100%;
+                        padding: 7px 20px;
+                        color: #fff;
+                        font-weight: 300;
+                        font-size: 14px;
+                        transition: .25s all ease;
+                        &:hover {
+                            color: $primary-color;
+                        }
+                    }
+                    &.is--active {
+                        &::after {
+                            content: url(../../img/navbar_city_check.svg);
+                            right: 15px;
+                            position: absolute;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+                        a {
+                            font-weight: 800;
+                        }
+                    }
+                }
+            }
+        }
+        &.is--open {
+            .navbar {
+                &__city {
+                    &__list {
+                        opacity: 1;
+                        visibility: visible;
+                        margin-top: -1px;
                     }
                 }
             }
@@ -123,6 +208,7 @@
         &__phone {
             transition: 1s all ease;
             transform: translateY(-20%);
+            margin-bottom: 30px;
             a {
                 display: block;
                 font-size: 18px;
@@ -136,18 +222,41 @@
                 }
             }
         }
-    }
-}
-
-@media (max-width: 1500px) {
-    .navbar {
-        &__menu {
-            margin-left: 30px;
+        &__city {
+            text-align: center;
+            &__heading {
+                color: #fff;
+                font-weight: bold;
+                font-size: 18px;
+                margin-bottom: 15px;
+            }
             ul {
                 li {
                     a {
-                        padding-left: 15px;
-                        padding-right: 15px;
+                        padding: 5px 0;
+                        display: block;
+                        color: #fff;
+                    }
+                    &.is--active {
+                        a {
+                            color: $primary-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1650px) {
+    .navbar {
+        &__menu {
+            margin-left: 15px;
+            ul {
+                li {
+                    a {
+                        padding-left: 12px;
+                        padding-right: 12px;
                     }
                 }
             }
@@ -160,7 +269,21 @@
     }
 }
 
-@media (max-width: 1220px) {
+@media (max-width: 1440px) {
+    .navbar {
+        &__menu {
+            ul {
+                li {
+                    a {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1300px) {
     .navbar {
         height: 70px;
         background: $dark-bg-color;
@@ -171,7 +294,8 @@
             }
         }
         &__menu,
-        &__phone {
+        &__phone,
+        &__city {
             display: none;
         }
         &__mbtn {

@@ -106,7 +106,12 @@
         }
         &__heading {
             .heading {
-                margin-bottom: 20px;
+                margin-bottom: 10px;
+            }
+            &__sub {
+                font-weight: 800;
+                margin-bottom: 40px;
+                font-size: 26px;
             }
         }
         .heading {
@@ -209,6 +214,21 @@
             display: flex;
             flex-wrap: wrap;
             margin-bottom: 50px;
+            &.is--three {
+                .builder {
+                    &__info {
+                        &__left,
+                        &__right,
+                        &__center {
+                            max-width: 33.3333%;
+                            width: 100%;
+                        }
+                        &__center {
+                            padding: 0 15px;
+                        }
+                    }
+                }
+            }
         }
         &__left,
         &__right {
@@ -232,7 +252,7 @@
                 color: $dark-text-color;
                 margin-bottom: 10px;
                 &::before {
-                    content: url(../img/svg/check.svg);
+                    content: url(../../img/svg/check.svg);
                     position: absolute;
                     left: 0;
                     top: 2px;
@@ -243,6 +263,20 @@
             @extend .container;
             display: flex;
             flex-wrap: wrap;
+            &.is--three {
+                justify-content: space-between;
+                .builder {
+                    &__info {
+                        &__footer {
+                            &__left,
+                            &__right {
+                                max-width: 33.33333%;
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
             &__left,
             &__right {
                 max-width: 50%;
@@ -401,6 +435,11 @@
                 padding-left: 50px;
                 padding-right: 50px;
             }
+            &__heading {
+                &__sub {
+                    font-size: 20px;
+                }
+            }
         }
     }
     .design {
@@ -418,6 +457,39 @@
             &__heading {
                 font-size: 24px;
                 line-height: 30px;
+            }
+            &__inner {
+                &.is--three {
+                    .builder {
+                        &__info {
+                            &__left,
+                            &__center,
+                            &__right {
+                                max-width: 100%;
+                            }
+                            &__center {
+                                padding: 0;
+                            }
+                        }
+                    }
+                }
+            }
+            &__footer {
+                &.is--three {
+                    .builder {
+                        &__info {
+                            &__footer {
+                                &__left {
+                                    margin-bottom: 30px;
+                                }
+                                &__left,
+                                &__right {
+                                    max-width: 100% !important;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -493,6 +565,11 @@
                 .heading {
                     font-size: 22px;
                     line-height: 26px;
+                }
+            }
+            &__heading {
+                &__sub {
+                    font-size: 16px;
                 }
             }
             &__street {

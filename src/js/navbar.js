@@ -34,6 +34,22 @@
             }
         }
 
+        function openCity() {
+            $('.navbar__city').addClass('is--open')
+        }
+
+        function closeCity() {
+            $('.navbar__city').removeClass('is--open')
+        }
+
+        function toggleCity() {
+            if($('.navbar__city').hasClass('is--open')) {
+                closeCity()
+            }else {
+                openCity()
+            }
+        }
+
         $(window).resize(function() {
             setNavbar()
         })
@@ -50,6 +66,15 @@
         $('#overlay').on('click', function() {
             $('body').removeAttr('class')
             $('.navbar__mbtn button').removeClass('is-active')
+        })
+
+        $('.navbar__city__label').on('click', function() {
+            toggleCity()
+        })
+
+        $(document).on('click', function(e) {
+            var targets = $(e.target).closest('.navbar__city')
+            if(targets.length <= 0) closeCity()
         })
 
     })
