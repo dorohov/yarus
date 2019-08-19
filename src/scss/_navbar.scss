@@ -78,6 +78,9 @@
                 top: 50%;
                 transform: translateY(-50%);
             }
+            img {
+                display: none;
+            }
         }
         &__list {
             position: absolute;
@@ -205,13 +208,13 @@
                 }
             }
         }
-        &__phone {
+        &__phone,
+        &__email {
             transition: 1s all ease;
             transform: translateY(-20%);
-            margin-bottom: 30px;
             a {
                 display: block;
-                font-size: 18px;
+                font-size: 20px;
                 font-weight: 600;
                 padding: 8px 30px;
                 color: #fff;
@@ -222,24 +225,22 @@
                 }
             }
         }
-        &__city {
-            text-align: center;
-            &__heading {
-                color: #fff;
-                font-weight: bold;
-                font-size: 18px;
-                margin-bottom: 15px;
-            }
+        &__email {
+            margin-bottom: 30px;
+        }
+
+        &__social {
+            margin-bottom: 30px;
             ul {
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 li {
+                    margin: 0 8px;
                     a {
-                        padding: 5px 0;
-                        display: block;
-                        color: #fff;
-                    }
-                    &.is--active {
-                        a {
-                            color: $primary-color;
+                        svg {
+                            height: 25px;
+                            fill: #fff;
                         }
                     }
                 }
@@ -293,13 +294,45 @@
                 height: 40px;
             }
         }
-        &__menu,
-        &__phone,
         &__city {
+            margin-left: auto;
+            margin-right: 0;
+            img {
+                display: block;
+                max-width: 24px;
+                margin: 0 10px 0 auto;
+            }
+            span {
+                display: none;
+            }
+            &__label {
+                padding: 0;
+                border: 0;
+                text-align: right;
+                &::after {
+                    content: none;
+                }
+            }
+            &__list {
+                white-space: nowrap;
+                background: $dark-bg-color;
+                ul {
+                    li {
+                        a {
+                            padding-left: 8px;
+                            padding-right: 8px;
+                        }
+                    }
+                }
+            }
+        }
+        &__menu,
+        &__phone {
             display: none;
         }
         &__mbtn {
             display: flex;
+            margin-left: 20px;
         }
         &__mobile {
             display: block;

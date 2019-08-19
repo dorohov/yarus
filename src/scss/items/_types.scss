@@ -270,7 +270,7 @@
                         &__footer {
                             &__left,
                             &__right {
-                                max-width: 33.33333%;
+                                max-width: 49%;
                                 width: 100%;
                             }
                         }
@@ -449,6 +449,15 @@
             }
         }
     }
+    .builder {
+        &__info {
+            &__footer {
+                br {
+                    display: none;
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: $resp1025) {
@@ -473,6 +482,10 @@
                         }
                     }
                 }
+            }
+            &__left,
+            &__center {
+                margin-bottom: 50px;
             }
             &__footer {
                 &.is--three {
