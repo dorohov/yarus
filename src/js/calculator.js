@@ -113,5 +113,14 @@
             clearError()
         })
 
+        calc32
+
+        var phoneInputs = document.getElementById('calc32');
+
+        new IMask(
+            phoneInputs, {
+            mask: '+{7}(900)000-00-00'
+        });
+
     })
 })(jQuery);

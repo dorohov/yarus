@@ -152,6 +152,7 @@ function createBundleJs() {
                 './dist/js/parsley.min.js',
                 './dist/js/i18n/ru.js',
                 './dist/js/swiper.min.js',
+                './dist/js/imask.js',
                 './dist/js/main.js'
             ])
             .pipe(sourcemaps.init())

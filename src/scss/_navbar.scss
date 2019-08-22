@@ -303,10 +303,11 @@
                 margin: 0 10px 0 auto;
             }
             span {
-                display: none;
+                display: block;
+                margin-left: auto;
             }
             &__label {
-                padding: 0;
+                padding: 0 0 0 10px;
                 border: 0;
                 text-align: right;
                 &::after {

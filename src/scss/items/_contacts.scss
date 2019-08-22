@@ -55,22 +55,22 @@
                 }
                 &.is--addres {
                     &::before {
-                        content: url(../img/svg/c_marker.svg);
+                        content: url(../../img/svg/c_marker.svg);
                     }
                 }
                 &.is--time {
                     &::before {
-                        content: url(../img/svg/c_clock.svg);
+                        content: url(../../img/svg/c_clock.svg);
                     }
                 }
                 &.is--phones {
                     &::before {
-                        content: url(../img/svg/c_phone.svg);
+                        content: url(../../img/svg/c_phone.svg);
                     }
                 }
                 &.is--email {
                     &::before {
-                        content: url(../img/svg/c_email.svg);
+                        content: url(../../img/svg/c_email.svg);
                     }
                 }
             }
