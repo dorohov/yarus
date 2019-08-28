@@ -97,6 +97,12 @@
                 line-height: 26px;
                 min-height: 55px;
                 margin-bottom: 20px;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                box-orient: vertical;
+                line-clamp: 3;
             }
             &__link {
                 span {

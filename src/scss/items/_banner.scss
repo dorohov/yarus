@@ -18,6 +18,10 @@
         width: 100%;
         background-size: cover;
         background-position: center;
+        .item_slider {
+            background-size: cover !important;
+            background-position: center !important;
+        }
     }
     &__text {
         position: absolute;

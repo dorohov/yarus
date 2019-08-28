@@ -57,9 +57,12 @@
         //     console.log(__item)
         // })
 
+        var cT = [], cTH = [];
+
         for(var i = 0; i < $('.working__block__left').length; i++) {
 
             var block = $('.working__block__left')[i]
+
             var galleryThumbs = new Swiper($(block).find('.gallery-thumbs') , {
                 spaceBetween: 24,
                 slidesPerView: 6,
@@ -77,6 +80,7 @@
                     }
                 }
             });
+            cTH.push(galleryThumbs)
             var galleryTop = new Swiper($(block).find('.gallery-top'), {
                 spaceBetween: 0,
                 lazy: true,
@@ -88,7 +92,34 @@
                     swiper: galleryThumbs
                 }
             });
+
+            cT.push(galleryTop)
+
         }
+
+        $('.swiper-wrapper .swiper-slide a').on('click', function(e) {
+            e.preventDefault()
+
+            var _this = $(this),
+                thisId = _this.data('id'),
+                thisItems = $('.swiper-slide img[data-id="' + thisId + '"]'),
+                thisCarousel = _this.closest('.gallery-top'),
+                thisThumbs = _this.closest('.gallery-top').siblings('.gallery-thumbs'),
+                thisNumber = _this.data('idn')
+
+            $.fancybox.open(thisItems, {
+                beforeShow: function(instance, slide) {
+                    
+                    thisNumber = slide.index
+
+                    cT[thisId - 1].slideTo(thisNumber)
+                    cTH[thisId - 1].slideTo(thisNumber)
+
+                    console.log(thisNumber, slide.index)
+
+                }
+            }, thisNumber);
+        })
         
     })
 })(jQuery);
