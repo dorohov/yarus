@@ -1,0 +1,31 @@
+<div class="slide rews">
+    <div class="container">
+        <div class="rews__heading">
+            <div class="rews__heading__left">
+                <h2 class="heading is--left">Отзывы</h2>
+            </div>
+            <div class="rews__heading__right">
+                @@include('../../items/button.html', {
+                    "color": "default",
+                    "type": "link",
+                    "text": "Все отзывы",
+                    "href": "@@pages.reviews"
+                })
+            </div>
+        </div>
+        <div class="rews__inner">
+            <div class="rews__slides">
+                @@include('simple.reviews.widget_new.block.html')
+                @@include('simple.reviews.widget_new.block.html')
+            </div>
+            <div class="rews__controls">
+                <button class="is--prev">
+                    @@include('../../items/svg.html', {"name": "rews_arrow"})
+                </button>
+                <button class="is--next">
+                    @@include('../../items/svg.html', {"name": "rews_arrow"})
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

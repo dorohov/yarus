@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="@@lang">
+<head>
+    @@include('main/head.html', {"title": "Вакансии"})
+</head>
+<body>
+    @@include('main/navbar.html', {
+        "type": "dark",
+        "preloader": "small"
+    })
+    <main class="__ispadding">
+        @@include('pages/vacancies/vacancies.main.html')
+    </main>
+    @@include('main/footer.html')
+</body>
+</html>

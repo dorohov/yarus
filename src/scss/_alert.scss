@@ -1,0 +1,65 @@
+.alert {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: $primary-color;
+    color: #fff;
+    z-index: 9999999;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 65px;
+    padding-right: 65px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    &__icon {
+        margin-right: 20px;
+        min-width: 35px;
+    }
+    &__text {
+        a {
+            color: #fff;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    &__close {
+        position: absolute;
+        right: 35px;
+        top: 50%;
+        margin-top: -10px;
+        button {
+            padding: 0;
+            margin: 0;
+            border: 0;
+            cursor: pointer;
+            outline: none;
+            background: url(../../img/alert_close.svg);
+            width: 25px;
+            height: 25px;
+            background-size: cover;
+        }
+    }
+    @media (max-width: 768px) {
+        font-size: 12px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 40px;
+        &__icon {
+            display: none;
+        }
+        &__close {
+            top: 15px;
+            margin-top: 0;
+            left: 0;
+            right: 0;
+            button {
+                width: 15px;
+                height: 15px;
+            }
+        }
+    }
+}

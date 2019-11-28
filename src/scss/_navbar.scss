@@ -4,6 +4,9 @@
     height: 100px;
     z-index: 12000;
     transition: .25s all ease;
+    .hamburger {
+        padding-bottom: 9px;
+    }
     &.is--dark {
         background: $dark-bg-color;
         .navbar {
@@ -11,6 +14,11 @@
                 &__list {
                     background: $dark-bg-color;
                 }
+            }
+        }
+        .__navbar-drop {
+            &__menu {
+                background: $dark-bg-color;
             }
         }
     }
@@ -21,26 +29,25 @@
         @extend .container;
     }
     &__logo {
+        margin-right: 50px;
         svg {
             fill: #fff;
         }
     }
     &__menu {
-        margin-left: 70px;
-        height: 100%;
         ul {
             display: flex;
             height: 100%;
             li {
                 height: 100%;
                 a {
-                    display: block;
                     height: 100%;
                     line-height: 100px;
-                    font-weight: 300;
                     font-size: 18px;
+                    padding: 0 22px;
+                    display: block;
                     color: #fff;
-                    padding: 0 27px;
+                    font-weight: 300;
                     transition: .25s all ease;
                     &:hover {
                         color: $primary-color;
@@ -55,81 +62,47 @@
         }
     }
     &__city {
-        color: #fff;
-        max-width: 160px;
-        width: 100%;
-        position: relative;
-        margin: 0 auto;
         &__label {
-            font-weight: 300;
-            font-size: 14px;
-            border: 1px solid #fff;
-            display: flex;
-            height: 42px;
-            align-items: center;
-            cursor: pointer;
-            padding: 0 20px;
+            font-weight: 600;
+            font-size: 16px;
+            color: #fff;
+            padding: 10px 20px 10px 0;
             position: relative;
-            user-select: none;
+            cursor: pointer;
             &::after {
                 content: url(../../img/navbar_city_arrow.svg);
-                right: 15px;
+                right: 0;
                 position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-            }
-            img {
-                display: none;
             }
         }
-        &__list {
-            position: absolute;
-            border: 1px solid #fff;
-            padding: 7px 0;
-            width: 100%;
-            left: 0;
-            top: 100%;
-            margin-top: 10px;
-            transition: .25s all ease;
-            visibility: hidden;
-            opacity: 0;
-            ul {
-                li {
-                    position: relative;
-                    a {
-                        display: block;
-                        width: 100%;
-                        padding: 7px 20px;
-                        color: #fff;
-                        font-weight: 300;
-                        font-size: 14px;
+    }
+    &__soc {
+        margin-left: 70px;
+        ul {
+            display: flex;
+            align-items: center;
+            li {
+                margin-right: 25px;
+                a {
+                    display: flex;
+                    height: 38px;
+                    width: 38px;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 100%;
+                    background: rgba(255, 255, 255, 0.15);
+                    transition: .25s all ease;
+                    svg {
+                        width: 16px;
+                        height: 16px;
+                        fill: #fff;
                         transition: .25s all ease;
-                        &:hover {
-                            color: $primary-color;
-                        }
                     }
-                    &.is--active {
-                        &::after {
-                            content: url(../../img/navbar_city_check.svg);
-                            right: 15px;
-                            position: absolute;
-                            top: 50%;
-                            transform: translateY(-50%);
+                    &:hover {
+                        background: rgba($primary-color, 0.15);
+                        svg {
+                            fill: $primary-color;
                         }
-                        a {
-                            font-weight: 800;
-                        }
-                    }
-                }
-            }
-        }
-        &.is--open {
-            .navbar {
-                &__city {
-                    &__list {
-                        opacity: 1;
-                        visibility: visible;
-                        margin-top: -1px;
                     }
                 }
             }
@@ -139,11 +112,26 @@
         margin-left: auto;
         a {
             font-weight: 800;
-            color: #fff;
             font-size: 24px;
+            color: #fff;
             transition: .25s all ease;
             &:hover {
                 color: $primary-color;
+            }
+        }
+    }
+    &__dropdown {
+        margin-right: 30px;
+        button {
+            outline: none;
+            span {
+                &.hamburger-inner {
+                    background-color: #fff !important;
+                    &::after,
+                    &::before {
+                        background-color: #fff !important;
+                    }
+                }
             }
         }
     }
@@ -249,38 +237,72 @@
     }
 }
 
-@media (max-width: 1650px) {
-    .navbar {
-        &__menu {
-            margin-left: 15px;
-            ul {
-                li {
-                    a {
-                        padding-left: 12px;
-                        padding-right: 12px;
-                    }
-                }
+.__navbar-drop {
+    position: relative;
+    &.is--open {
+        .__navbar-drop {
+            &__menu {
+                opacity: 1;
+                visibility: visible;
+                margin-top: 0;
             }
         }
-        &__phone {
-            a {
-                font-size: 18px;
+    }
+    &__menu {
+        position: absolute;
+        border: 1px solid #fff;
+        padding: 7px 0;
+        left: 0;
+        top: 100%;
+        margin-top: 20px;
+        visibility: hidden;
+        opacity: 0;
+        transition: .25s all ease;
+        ul {
+            li {
+                a {
+                    padding: 7px 20px;
+                    font-size: 14px;
+                    color: #fff;
+                    display: block;
+                    white-space: nowrap;
+                    transition: .25s all ease;
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+                &.is--active {
+                    a {
+                        padding-right: 50px;
+                        position: relative;
+                        font-weight: 800;
+                        &::after {
+                            content: url(../../img/navbar_city_check.svg);
+                            right: 15px;
+                            position: absolute;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+                    }
+                }
+                &._resp-p1,
+                &._resp-p2 {
+                    display: none;
+                }
             }
         }
     }
 }
 
+@media (max-width: 1650px) {
+    .navbar {
+        
+    }
+}
+
 @media (max-width: 1440px) {
     .navbar {
-        &__menu {
-            ul {
-                li {
-                    a {
-                        font-size: 16px;
-                    }
-                }
-            }
-        }
+        
     }
 }
 
@@ -289,54 +311,79 @@
         height: 70px;
         background: $dark-bg-color;
         &__logo {
+            margin-right: 30px;
             svg {
                 width: 94px;
                 height: 40px;
             }
         }
+        &__menu,
+        &__dropdown,
+        &__soc,
+        &__phone {
+            display: none;
+        }
         &__city {
             margin-left: auto;
-            margin-right: 0;
-            img {
-                display: block;
-                max-width: 24px;
-                margin: 0 10px 0 auto;
-            }
-            span {
-                display: block;
-                margin-left: auto;
-            }
             &__label {
-                padding: 0 0 0 10px;
-                border: 0;
-                text-align: right;
+                padding-right: 0;
                 &::after {
                     content: none;
                 }
             }
-            &__list {
-                white-space: nowrap;
+        }
+        &__mobile {
+            display: block;
+        }
+        &__mbtn {
+            margin-left: 30px;
+            display: flex;
+        }
+    }
+    .__navbar {
+        &-drop {
+            &__menu {
                 background: $dark-bg-color;
-                ul {
-                    li {
-                        a {
-                            padding-left: 8px;
-                            padding-right: 8px;
-                        }
+            }
+        }
+    }
+}
+
+// New menu apadtation
+
+@media (max-width: 1650px) {
+    .navbar {
+        &__menu {
+            ul {
+                li {
+                    &._resp-p1 {
+                        display: none;
+                    }
+                    a {
+                        font-size: 16px;
+                        padding: 0 15px;
                     }
                 }
             }
         }
-        &__menu,
+        &__soc {
+            margin-left: 30px;
+        }
         &__phone {
-            display: none;
+            a {
+                font-size: 20px;
+            }
         }
-        &__mbtn {
-            display: flex;
-            margin-left: 20px;
-        }
-        &__mobile {
-            display: block;
+    }
+    .__navbar-drop {
+        &__menu {
+            ul {
+                li {
+                    &._resp-p1 {
+                        display: block;
+                    }
+                }
+            }
         }
     }
 }

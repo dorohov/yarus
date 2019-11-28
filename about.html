@@ -30,35 +30,60 @@
             </div>
             <div class="navbar__menu">
                 <ul>
-
-                    <li class="is--active"><a href="our_work.html">Ремонтные работы</a></li>
-
-
+                    <li class="is--active"><a href="our_work.html">Услуги</a></li>
                     <li><a href="our_work_design.html">Дизайн интерьера</a></li>
-
-                    <li><a href="portfolio.html">Портфолио</a></li>
-
-                    <li><a href="about.html">О компании</a></li>
-
-                    <li><a href="blog.html">Блог</a></li>
-
-                    <li><a href="contacts.html">Контакты</a></li>
-
+                    <li class="_resp-p2"><a href="portfolio.html">Портфолио</a></li>
+                    <li class="_resp-p2"><a href="about.html">О компании</a></li>
+                    <li class="_resp-p1"><a href="reviews.html">Отзывы</a></li>
+                    <li class="_resp-p1"><a href="contacts.html">Контакты</a></li>
                 </ul>
             </div>
-            <div class="navbar__city">
-                <div class="navbar__city__label">
-                    <span>Воронеж</span>
-                </div>
-                <div class="navbar__city__list">
+            <div class="navbar__dropdown __navbar-drop">
+                <button class="hamburger hamburger--spin __navbar-drop__label" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+                <div class="__navbar-drop__menu">
                     <ul>
-                        <li class="is--active"><a href="#">Орёл</a></li>
+                        <li><a href="blog.html">Блог</a></li>
+                        <li><a href="vacancies.html">Вакансии</a></li>
+                        <li class="_resp-p1"><a href="reviews.html">Отзывы</a></li>
+                        <li class="_resp-p1"><a href="contacts.html">Контакты</a></li>
+                        <li class="_resp-p2"><a href="portfolio.html">Портфолио</a></li>
+                        <li class="_resp-p2"><a href="about.html">О компании</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navbar__city __navbar-drop">
+                <div class="navbar__city__label __navbar-drop__label">Орел</div>
+                <div class="__navbar-drop__menu">
+                    <ul>
+                        <li class="is--active"><a href="#">Орел</a></li>
                         <li><a href="#">Воронеж</a></li>
                     </ul>
                 </div>
             </div>
+            <div class="navbar__soc">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <svg class="svg-vk-dims svg is--vk">
+                                <use xlink:href="img/svg/sprites.svg#vk"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg class="svg-instagram-dims svg is--instagram">
+                                <use xlink:href="img/svg/sprites.svg#instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
             <div class="navbar__phone">
-                <a href="tel:84862508535">+7 (4862) 50-85-35</a>
+                <a href="84862508535">+7 (4862) 50-85-35</a>
             </div>
             <div class="navbar__mbtn">
                 <button class="hamburger hamburger--spin" type="button">
@@ -73,20 +98,14 @@
         <div class="navbar__mobile__inner">
             <div class="navbar__mobile__menu">
                 <ul>
-
-                    <li class="is--active"><a href="our_work.html">Ремонтные работы</a></li>
-
-
+                    <li class="is--active"><a href="our_work.html">Услуги</a></li>
                     <li><a href="our_work_design.html">Дизайн интерьера</a></li>
-
                     <li><a href="portfolio.html">Портфолио</a></li>
-
                     <li><a href="about.html">О компании</a></li>
-
-                    <li><a href="blog.html">Блог</a></li>
-
+                    <li><a href="reviews.html">Отзывы</a></li>
                     <li><a href="contacts.html">Контакты</a></li>
-
+                    <li><a href="blog.html">Блог</a></li>
+                    <li><a href="vacancies.html">Вакансии</a></li>
                 </ul>
             </div>
             <div class="navbar__mobile__social">
@@ -122,6 +141,7 @@
             </div>
         </div>
     </div>
+
     <main class="__ispadding">
         <div class="about__top">
             <div class="about__top__inner">
@@ -212,93 +232,123 @@
 
             </div>
         </div>
-        <div class="about__reviews slide">
-            <div class="about__reviews__inner">
-                <div class="about__reviews__heading">
-                    <h2 class="heading is--left">Отзывы наших клиентов</h2>
-                </div>
-                <div class="about__reviews__list">
-                    <div class="about__reviews__block is--small">
-                        <div class="about__reviews__block__name">
-                            Наталья Тарасенко
-                        </div>
-                        <div class="about__reviews__block__project">Косметический ремонт учебного центра <br> по ул. Салтыкова Щедрина</div>
-                        <div class="about__reviews__block__review">Выражаю огромную благодарность за проделанную работу, сделанную на высочайшем уровне. В отведённые сроки, без всяческих задержек и проволочек.</div>
-
-                        <div class="about__reviews__block__footer">
-                            <div class="about__reviews__block__footer__link">
-
-                                <a href="reviews.html" class="btn is--default">
-                                    <span>Подробнее</span>
-                                </a>
-
-
-
-
-
-                            </div>
-                            <div class="about__reviews__block__footer__date">07.11.2017</div>
-                        </div>
+        <div class="slide rews">
+            <div class="container">
+                <div class="rews__heading">
+                    <div class="rews__heading__left">
+                        <h2 class="heading is--left">Отзывы</h2>
                     </div>
-                    <div class="about__reviews__block is--small">
-                        <div class="about__reviews__block__name">
-                            Альбина Самойлова
-                        </div>
-                        <div class="about__reviews__block__project">Дизайнерский ремонт салона <br> красоты «Под ключ»</div>
-                        <div class="about__reviews__block__review">В студию ремонта «Ярус» я обратилась с непростой задачей: в максимально короткий срок (2 месяца) сделать высококачественный ремонт на 150 м2.</div>
+                    <div class="rews__heading__right">
 
-                        <div class="about__reviews__block__footer">
-                            <div class="about__reviews__block__footer__link">
-
-                                <a href="reviews.html" class="btn is--default">
-                                    <span>Подробнее</span>
-                                </a>
+                        <a href="reviews.html" class="btn is--default">
+                            <span>Все отзывы</span>
+                        </a>
 
 
 
 
 
-                            </div>
-                            <div class="about__reviews__block__footer__date">31.10.2017</div>
-                        </div>
-                    </div>
-                    <div class="about__reviews__block is--small">
-                        <div class="about__reviews__block__name">
-                            Константин Иванов
-                        </div>
-                        <div class="about__reviews__block__project">Ремонт кухни-столовой по <br> адресу Бульвар победы, 5</div>
-                        <div class="about__reviews__block__review">Выполнен ремонт кухни-столовой великолепно, мастера отличные! Всем рекомендую фирму «Ярус». Работали отлично, быстро и качественно.</div>
-
-                        <div class="about__reviews__block__footer">
-                            <div class="about__reviews__block__footer__link">
-
-                                <a href="reviews.html" class="btn is--default">
-                                    <span>Подробнее</span>
-                                </a>
-
-
-
-
-
-                            </div>
-                            <div class="about__reviews__block__footer__date">23.01.2017</div>
-                        </div>
                     </div>
                 </div>
-                <div class="about__reviews__btn">
-
-                    <a href="reviews.html" class="btn is--default">
-                        <span>Читать все отзывы</span>
-                    </a>
-
-
-
-
-
+                <div class="rews__inner">
+                    <div class="rews__slides">
+                        <div class="rews__block">
+                            <div class="rews__block__inner">
+                                <div class="rews__block__left">
+                                    <div class="rews__block__images">
+                                        <div class="rews__block__images__left">
+                                            <a href="img/rews1.jpg" data-fancybox>
+                                                <img src="img/rews1.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="rews__block__images__right">
+                                            <a href="img/rews2.jpg" data-fancybox>
+                                                <img src="img/rews2.jpg" alt="">
+                                            </a>
+                                            <a href="img/rews3.jpg" data-fancybox>
+                                                <img src="img/rews3.jpg" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rews__block__right">
+                                    <div class="rews__block__right__title">Наталья Тарасенко</div>
+                                    <div class="rews__block__right__sub">Косметический ремонт учебного центра <br> по ул. Салтыкова Щедрина</div>
+                                    <div class="rews__block__right__desc">
+                                        Мы с мужем решили сделать ремонт в нашей квартире с полной перепланировкой. Каждый, кто сталкивается с этим, знает, как тяжело всё это организовать, особенно, когда у тебя семья и ты проводишь много времени на работе. Поэтому мы и решили обратиться в студию «Ярус» и ни разу не пожалели. В этой компании работают настоящие профессионалы своего дела! Нам разработали полностью дизайн-проект с учётом наших пожеланий к работе. Мастера не только слушали наши «хотелки», но и давали грамотные советы. Нам предоставили три варианта решения планировки, из которых в следствие мы сделали один, идеально подходящий для нас.
+                                    </div>
+                                    <div class="rews__block__right__footer">
+                                        <div class="rews__block__right__footer__original">
+                                            <a href="img/review.jpg" data-fancybox data-caption="Наталья Тарасенко | 31.10.2017">Посмотреть оригинал</a>
+                                        </div>
+                                        <div class="rews__block__right__footer__vk">
+                                            <a href="#">
+                                                <svg class="svg-vk-dims svg is--vk">
+                                                    <use xlink:href="img/svg/sprites.svg#vk"></use>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rews__block">
+                            <div class="rews__block__inner">
+                                <div class="rews__block__left">
+                                    <div class="rews__block__images">
+                                        <div class="rews__block__images__left">
+                                            <a href="img/rews1.jpg" data-fancybox>
+                                                <img src="img/rews1.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="rews__block__images__right">
+                                            <a href="img/rews2.jpg" data-fancybox>
+                                                <img src="img/rews2.jpg" alt="">
+                                            </a>
+                                            <a href="img/rews3.jpg" data-fancybox>
+                                                <img src="img/rews3.jpg" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rews__block__right">
+                                    <div class="rews__block__right__title">Наталья Тарасенко</div>
+                                    <div class="rews__block__right__sub">Косметический ремонт учебного центра <br> по ул. Салтыкова Щедрина</div>
+                                    <div class="rews__block__right__desc">
+                                        Мы с мужем решили сделать ремонт в нашей квартире с полной перепланировкой. Каждый, кто сталкивается с этим, знает, как тяжело всё это организовать, особенно, когда у тебя семья и ты проводишь много времени на работе. Поэтому мы и решили обратиться в студию «Ярус» и ни разу не пожалели. В этой компании работают настоящие профессионалы своего дела! Нам разработали полностью дизайн-проект с учётом наших пожеланий к работе. Мастера не только слушали наши «хотелки», но и давали грамотные советы. Нам предоставили три варианта решения планировки, из которых в следствие мы сделали один, идеально подходящий для нас.
+                                    </div>
+                                    <div class="rews__block__right__footer">
+                                        <div class="rews__block__right__footer__original">
+                                            <a href="img/review.jpg" data-fancybox data-caption="Наталья Тарасенко | 31.10.2017">Посмотреть оригинал</a>
+                                        </div>
+                                        <div class="rews__block__right__footer__vk">
+                                            <a href="#">
+                                                <svg class="svg-vk-dims svg is--vk">
+                                                    <use xlink:href="img/svg/sprites.svg#vk"></use>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rews__controls">
+                        <button class="is--prev">
+                            <svg class="svg-rews_arrow-dims svg is--rews_arrow">
+                                <use xlink:href="img/svg/sprites.svg#rews_arrow"></use>
+                            </svg>
+                        </button>
+                        <button class="is--next">
+                            <svg class="svg-rews_arrow-dims svg is--rews_arrow">
+                                <use xlink:href="img/svg/sprites.svg#rews_arrow"></use>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="slide form" id="main_form">
+        <div class="slide form is--@@type" id="main_form">
             <div class="form__heading">
                 <h2 class="heading is--center">Получить консультацию</h2>
             </div>

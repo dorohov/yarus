@@ -30,35 +30,60 @@
             </div>
             <div class="navbar__menu">
                 <ul>
-
-                    <li class="is--active"><a href="our_work.html">Ремонтные работы</a></li>
-
-
+                    <li class="is--active"><a href="our_work.html">Услуги</a></li>
                     <li><a href="our_work_design.html">Дизайн интерьера</a></li>
-
-                    <li><a href="portfolio.html">Портфолио</a></li>
-
-                    <li><a href="about.html">О компании</a></li>
-
-                    <li><a href="blog.html">Блог</a></li>
-
-                    <li><a href="contacts.html">Контакты</a></li>
-
+                    <li class="_resp-p2"><a href="portfolio.html">Портфолио</a></li>
+                    <li class="_resp-p2"><a href="about.html">О компании</a></li>
+                    <li class="_resp-p1"><a href="reviews.html">Отзывы</a></li>
+                    <li class="_resp-p1"><a href="contacts.html">Контакты</a></li>
                 </ul>
             </div>
-            <div class="navbar__city">
-                <div class="navbar__city__label">
-                    <span>Воронеж</span>
-                </div>
-                <div class="navbar__city__list">
+            <div class="navbar__dropdown __navbar-drop">
+                <button class="hamburger hamburger--spin __navbar-drop__label" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+                <div class="__navbar-drop__menu">
                     <ul>
-                        <li class="is--active"><a href="#">Орёл</a></li>
+                        <li><a href="blog.html">Блог</a></li>
+                        <li><a href="vacancies.html">Вакансии</a></li>
+                        <li class="_resp-p1"><a href="reviews.html">Отзывы</a></li>
+                        <li class="_resp-p1"><a href="contacts.html">Контакты</a></li>
+                        <li class="_resp-p2"><a href="portfolio.html">Портфолио</a></li>
+                        <li class="_resp-p2"><a href="about.html">О компании</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navbar__city __navbar-drop">
+                <div class="navbar__city__label __navbar-drop__label">Орел</div>
+                <div class="__navbar-drop__menu">
+                    <ul>
+                        <li class="is--active"><a href="#">Орел</a></li>
                         <li><a href="#">Воронеж</a></li>
                     </ul>
                 </div>
             </div>
+            <div class="navbar__soc">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <svg class="svg-vk-dims svg is--vk">
+                                <use xlink:href="img/svg/sprites.svg#vk"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg class="svg-instagram-dims svg is--instagram">
+                                <use xlink:href="img/svg/sprites.svg#instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
             <div class="navbar__phone">
-                <a href="tel:84862508535">+7 (4862) 50-85-35</a>
+                <a href="84862508535">+7 (4862) 50-85-35</a>
             </div>
             <div class="navbar__mbtn">
                 <button class="hamburger hamburger--spin" type="button">
@@ -73,20 +98,14 @@
         <div class="navbar__mobile__inner">
             <div class="navbar__mobile__menu">
                 <ul>
-
-                    <li class="is--active"><a href="our_work.html">Ремонтные работы</a></li>
-
-
+                    <li class="is--active"><a href="our_work.html">Услуги</a></li>
                     <li><a href="our_work_design.html">Дизайн интерьера</a></li>
-
                     <li><a href="portfolio.html">Портфолио</a></li>
-
                     <li><a href="about.html">О компании</a></li>
-
-                    <li><a href="blog.html">Блог</a></li>
-
+                    <li><a href="reviews.html">Отзывы</a></li>
                     <li><a href="contacts.html">Контакты</a></li>
-
+                    <li><a href="blog.html">Блог</a></li>
+                    <li><a href="vacancies.html">Вакансии</a></li>
                 </ul>
             </div>
             <div class="navbar__mobile__social">
@@ -122,28 +141,47 @@
             </div>
         </div>
     </div>
+
     <main>
         <div class="banner">
             <div class="banner__inner">
-                <div class="banner__left"></div>
-                <div class="banner__right" style="background-image: url('img/banner.jpg');"></div>
-                <div class="banner__text">
-                    <div class="banner__text__inner">
-                        <h1 class="banner__text__name">
-                            Студия ремонта ярус
-                        </h1>
-                        <div class="banner__text__btn">
+                <div class="banner__content is--c-pl">
+                    <div class="banner__title">Дизайн-проект <br> квартиры</div>
+                    <div class="banner__address">Ул. 8 марта, 8, г. Орёл</div>
+                    <div class="banner__btn">
+
+                        <a href="#" class="btn is--inverted">
+                            <span>Подробнее о проекте</span>
+                        </a>
 
 
 
 
 
-                            <a href="#main_form" class="btn is--inverted __is--anchor">
-                                <span>Оставить заявку</span>
-                            </a>
-
+                    </div>
+                    <div class="banner__nav">
+                        <div class="banner__nav__left">
+                            <div class="banner__nav__left__title">Следующий</div>
+                            <div class="banner__nav__left__desc">Дизайн-проект <br> квартиры</div>
+                        </div>
+                        <div class="banner__nav__right">
+                            <button class="is--prev">
+                                <img src="img/banner_arrow_prev.png" alt="">
+                            </button>
+                            <button class="is--next">
+                                <img src="img/banner_arrow.png" alt="">
+                            </button>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="banner__slides">
+                <div class="banner__slides__inner">
+                    <div class="banner__slides__slide" style="background-image: url('img/banner.jpg');" data-text="Дизайн и ремонт <br> квартиры" data-address="Ул. 8 марта, 8, г. Орёл" data-link="project1"></div>
+                    <div class="banner__slides__slide" style="background-image: url('img/banner2.jpg');" data-text="Дизайн и ремонт <br> квартиры 2" data-address="Ул. 9 марта, 9, г. Орёл" data-link="project2"></div>
+                    <div class="banner__slides__slide" style="background-image: url('img/banner2.jpg');" data-text="Дизайн и ремонт <br> квартиры 3" data-address="Ул. 93 марта, 9, г. Орёл" data-link="project3"></div>
+                    <div class="banner__slides__slide" style="background-image: url('img/banner2.jpg');" data-text="Дизайн и ремонт <br> квартиры 4" data-address="Ул. 94 марта, 9, г. Орёл" data-link="project4"></div>
+                    <div class="banner__slides__slide" style="background-image: url('img/banner2.jpg');" data-text="Дизайн и ремонт <br> квартиры 5" data-address="Ул. 95 марта, 9, г. Орёл" data-link="project5"></div>
                 </div>
             </div>
         </div>
@@ -441,8 +479,124 @@
                 </div>
             </div>
         </div>
+        <div class="slide rews">
+            <div class="container">
+                <div class="rews__heading">
+                    <div class="rews__heading__left">
+                        <h2 class="heading is--left">Отзывы</h2>
+                    </div>
+                    <div class="rews__heading__right">
 
-        <div class="slide portfolio is--left is--small">
+                        <a href="reviews.html" class="btn is--default">
+                            <span>Все отзывы</span>
+                        </a>
+
+
+
+
+
+                    </div>
+                </div>
+                <div class="rews__inner">
+                    <div class="rews__slides">
+                        <div class="rews__block">
+                            <div class="rews__block__inner">
+                                <div class="rews__block__left">
+                                    <div class="rews__block__images">
+                                        <div class="rews__block__images__left">
+                                            <a href="img/rews1.jpg" data-fancybox>
+                                                <img src="img/rews1.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="rews__block__images__right">
+                                            <a href="img/rews2.jpg" data-fancybox>
+                                                <img src="img/rews2.jpg" alt="">
+                                            </a>
+                                            <a href="img/rews3.jpg" data-fancybox>
+                                                <img src="img/rews3.jpg" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rews__block__right">
+                                    <div class="rews__block__right__title">Наталья Тарасенко</div>
+                                    <div class="rews__block__right__sub">Косметический ремонт учебного центра <br> по ул. Салтыкова Щедрина</div>
+                                    <div class="rews__block__right__desc">
+                                        Мы с мужем решили сделать ремонт в нашей квартире с полной перепланировкой. Каждый, кто сталкивается с этим, знает, как тяжело всё это организовать, особенно, когда у тебя семья и ты проводишь много времени на работе. Поэтому мы и решили обратиться в студию «Ярус» и ни разу не пожалели. В этой компании работают настоящие профессионалы своего дела! Нам разработали полностью дизайн-проект с учётом наших пожеланий к работе. Мастера не только слушали наши «хотелки», но и давали грамотные советы. Нам предоставили три варианта решения планировки, из которых в следствие мы сделали один, идеально подходящий для нас.
+                                    </div>
+                                    <div class="rews__block__right__footer">
+                                        <div class="rews__block__right__footer__original">
+                                            <a href="img/review.jpg" data-fancybox data-caption="Наталья Тарасенко | 31.10.2017">Посмотреть оригинал</a>
+                                        </div>
+                                        <div class="rews__block__right__footer__vk">
+                                            <a href="#">
+                                                <svg class="svg-vk-dims svg is--vk">
+                                                    <use xlink:href="img/svg/sprites.svg#vk"></use>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rews__block">
+                            <div class="rews__block__inner">
+                                <div class="rews__block__left">
+                                    <div class="rews__block__images">
+                                        <div class="rews__block__images__left">
+                                            <a href="img/rews1.jpg" data-fancybox>
+                                                <img src="img/rews1.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="rews__block__images__right">
+                                            <a href="img/rews2.jpg" data-fancybox>
+                                                <img src="img/rews2.jpg" alt="">
+                                            </a>
+                                            <a href="img/rews3.jpg" data-fancybox>
+                                                <img src="img/rews3.jpg" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rews__block__right">
+                                    <div class="rews__block__right__title">Наталья Тарасенко</div>
+                                    <div class="rews__block__right__sub">Косметический ремонт учебного центра <br> по ул. Салтыкова Щедрина</div>
+                                    <div class="rews__block__right__desc">
+                                        Мы с мужем решили сделать ремонт в нашей квартире с полной перепланировкой. Каждый, кто сталкивается с этим, знает, как тяжело всё это организовать, особенно, когда у тебя семья и ты проводишь много времени на работе. Поэтому мы и решили обратиться в студию «Ярус» и ни разу не пожалели. В этой компании работают настоящие профессионалы своего дела! Нам разработали полностью дизайн-проект с учётом наших пожеланий к работе. Мастера не только слушали наши «хотелки», но и давали грамотные советы. Нам предоставили три варианта решения планировки, из которых в следствие мы сделали один, идеально подходящий для нас.
+                                    </div>
+                                    <div class="rews__block__right__footer">
+                                        <div class="rews__block__right__footer__original">
+                                            <a href="img/review.jpg" data-fancybox data-caption="Наталья Тарасенко | 31.10.2017">Посмотреть оригинал</a>
+                                        </div>
+                                        <div class="rews__block__right__footer__vk">
+                                            <a href="#">
+                                                <svg class="svg-vk-dims svg is--vk">
+                                                    <use xlink:href="img/svg/sprites.svg#vk"></use>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rews__controls">
+                        <button class="is--prev">
+                            <svg class="svg-rews_arrow-dims svg is--rews_arrow">
+                                <use xlink:href="img/svg/sprites.svg#rews_arrow"></use>
+                            </svg>
+                        </button>
+                        <button class="is--next">
+                            <svg class="svg-rews_arrow-dims svg is--rews_arrow">
+                                <use xlink:href="img/svg/sprites.svg#rews_arrow"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide portfolio is--left bg-white is--small">
 
 
             <div class="container">
@@ -554,7 +708,7 @@
 
             </div>
         </div>
-        <div class="slide form" id="main_form">
+        <div class="slide form is--grey" id="main_form">
             <div class="form__heading">
                 <h2 class="heading is--center">Получить консультацию</h2>
             </div>

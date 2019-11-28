@@ -1,6 +1,7 @@
 var images = document.querySelectorAll('.lazy');
-    window.addEventListener('load', function() {
-        images.forEach(function(img) {
-            img.src = img.dataset.src;
-        });
+
+window.addEventListener('load', function() {
+    for(var i = 0; i < images.length; i++) {
+        images[i].src = images[i].dataset.src;
+    }
 })

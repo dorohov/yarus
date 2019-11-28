@@ -1,6 +1,9 @@
 .portfolio {
     background: #F3F3F3;
     overflow: hidden;
+    &.bg-white {
+        background: #fff;
+    }
     &.is--all {
         .portfolio {
             &__main {

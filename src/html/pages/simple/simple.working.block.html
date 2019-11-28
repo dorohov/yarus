@@ -1,12 +1,12 @@
 <div class="working__block is--@@align">
     <div class="working__block__left">
         <div class="working__block__carousel">
-            <div class="swiper-container gallery-top">
+            <div class="swiper-container gallery-top __lz1">
                 <div class="swiper-wrapper">
                     @@for(var i = 0; i < photos.length; i++) {
                         <div class="swiper-slide">
                             <a href="img/`+photos[i]+`" data-id="@@carousel_id" class="is-nc" data-idn="`+i+`">
-                                <img src="img/placeholder.jpg" data-src="img/`+photos[i]+`" alt="" class="lazy">
+                                <img src="img/placeholder.jpg" data-src="img/`+photos[i]+`" alt="" class="lazy2 is--big">
                             </a>
                         </div>
                     }
@@ -20,11 +20,11 @@
                     </button>
                 </div>                
             </div>
-            <div class="swiper-container gallery-thumbs">
+            <div class="swiper-container gallery-thumbs __lz2">
                 <div class="swiper-wrapper">
                     @@for(var i = 0; i < photos.length; i++) {
-                        <div class="swiper-slide">
-                            <img src="img/placeholder.jpg" data-src="img/`+photos[i]+`" alt="" class="lazy" data-id="@@carousel_id">
+                        <div class="swiper-slide" data-fullimg="img/`+photos[i]+`">
+                            <img src="img/placeholder.jpg" data-src="img/`+photos[i]+`" alt="" class="lazy2 is--small" data-id="@@carousel_id">
                         </div>
                     }
                 </div>

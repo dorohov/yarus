@@ -45,7 +45,8 @@
         "contacts": "contacts.html",
         "reviews": "reviews.html",
         "review": "review.html",
-        "working_process": "working_process.html"
+        "working_process": "working_process.html",
+        "vacancies": "vacancies.html"
     },
     "social": {
         "vk": "https://vk.com/yarus57",

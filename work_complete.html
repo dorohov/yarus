@@ -30,35 +30,60 @@
             </div>
             <div class="navbar__menu">
                 <ul>
-
-                    <li class="is--active"><a href="our_work.html">Ремонтные работы</a></li>
-
-
+                    <li class="is--active"><a href="our_work.html">Услуги</a></li>
                     <li><a href="our_work_design.html">Дизайн интерьера</a></li>
-
-                    <li><a href="portfolio.html">Портфолио</a></li>
-
-                    <li><a href="about.html">О компании</a></li>
-
-                    <li><a href="blog.html">Блог</a></li>
-
-                    <li><a href="contacts.html">Контакты</a></li>
-
+                    <li class="_resp-p2"><a href="portfolio.html">Портфолио</a></li>
+                    <li class="_resp-p2"><a href="about.html">О компании</a></li>
+                    <li class="_resp-p1"><a href="reviews.html">Отзывы</a></li>
+                    <li class="_resp-p1"><a href="contacts.html">Контакты</a></li>
                 </ul>
             </div>
-            <div class="navbar__city">
-                <div class="navbar__city__label">
-                    <span>Воронеж</span>
-                </div>
-                <div class="navbar__city__list">
+            <div class="navbar__dropdown __navbar-drop">
+                <button class="hamburger hamburger--spin __navbar-drop__label" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+                <div class="__navbar-drop__menu">
                     <ul>
-                        <li class="is--active"><a href="#">Орёл</a></li>
+                        <li><a href="blog.html">Блог</a></li>
+                        <li><a href="vacancies.html">Вакансии</a></li>
+                        <li class="_resp-p1"><a href="reviews.html">Отзывы</a></li>
+                        <li class="_resp-p1"><a href="contacts.html">Контакты</a></li>
+                        <li class="_resp-p2"><a href="portfolio.html">Портфолио</a></li>
+                        <li class="_resp-p2"><a href="about.html">О компании</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navbar__city __navbar-drop">
+                <div class="navbar__city__label __navbar-drop__label">Орел</div>
+                <div class="__navbar-drop__menu">
+                    <ul>
+                        <li class="is--active"><a href="#">Орел</a></li>
                         <li><a href="#">Воронеж</a></li>
                     </ul>
                 </div>
             </div>
+            <div class="navbar__soc">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <svg class="svg-vk-dims svg is--vk">
+                                <use xlink:href="img/svg/sprites.svg#vk"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg class="svg-instagram-dims svg is--instagram">
+                                <use xlink:href="img/svg/sprites.svg#instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
             <div class="navbar__phone">
-                <a href="tel:84862508535">+7 (4862) 50-85-35</a>
+                <a href="84862508535">+7 (4862) 50-85-35</a>
             </div>
             <div class="navbar__mbtn">
                 <button class="hamburger hamburger--spin" type="button">
@@ -73,20 +98,14 @@
         <div class="navbar__mobile__inner">
             <div class="navbar__mobile__menu">
                 <ul>
-
-                    <li class="is--active"><a href="our_work.html">Ремонтные работы</a></li>
-
-
+                    <li class="is--active"><a href="our_work.html">Услуги</a></li>
                     <li><a href="our_work_design.html">Дизайн интерьера</a></li>
-
                     <li><a href="portfolio.html">Портфолио</a></li>
-
                     <li><a href="about.html">О компании</a></li>
-
-                    <li><a href="blog.html">Блог</a></li>
-
+                    <li><a href="reviews.html">Отзывы</a></li>
                     <li><a href="contacts.html">Контакты</a></li>
-
+                    <li><a href="blog.html">Блог</a></li>
+                    <li><a href="vacancies.html">Вакансии</a></li>
                 </ul>
             </div>
             <div class="navbar__mobile__social">
@@ -122,6 +141,7 @@
             </div>
         </div>
     </div>
+
     <main class="__ispadding">
         <div class="tcard">
             <div class="tcard__left">
@@ -257,7 +277,7 @@
                 </div>
             </div>
         </div>
-        <div class="slide form" id="main_form">
+        <div class="slide form is--@@type" id="main_form">
             <div class="form__heading">
                 <h2 class="heading is--center">Получить консультацию</h2>
             </div>

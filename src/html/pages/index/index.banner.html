@@ -1,21 +1,69 @@
 <div class="banner">
     <div class="banner__inner">
-        <div class="banner__left"></div>
-        <div class="banner__right" style="background-image: url('img/banner.jpg');"></div>
-        <div class="banner__text">
-            <div class="banner__text__inner">
-                <h1 class="banner__text__name">
-                    Студия ремонта ярус 
-                </h1>
-                <div class="banner__text__btn">
-                    @@include('../../items/button.html', {
-                        "color": "inverted",
-                        "type": "anchor",
-                        "text": "Оставить заявку",
-                        "href": "#main_form"
-                    })
+        <div class="banner__content is--c-pl">
+            <div class="banner__title">Дизайн-проект <br> квартиры</div>
+            <div class="banner__address">Ул. 8 марта, 8, г. Орёл</div>
+            <div class="banner__btn">
+                @@include('../../items/button.html', {
+                    "color": "inverted",
+                    "type": "link",
+                    "text": "Подробнее о проекте",
+                    "href": "#"
+                })
+            </div>
+            <div class="banner__nav">
+                <div class="banner__nav__left">
+                    <div class="banner__nav__left__title">Следующий</div>
+                    <div class="banner__nav__left__desc">Дизайн-проект <br> квартиры</div>
+                </div>
+                <div class="banner__nav__right">
+                    <button class="is--prev">
+                        <img src="img/banner_arrow_prev.png" alt="">
+                    </button>
+                    <button class="is--next">
+                        <img src="img/banner_arrow.png" alt="">
+                    </button>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="banner__slides">
+        <div class="banner__slides__inner">
+            <div 
+                class="banner__slides__slide" 
+                style="background-image: url('img/banner.jpg');"
+                data-text="Дизайн и ремонт <br> квартиры"
+                data-address="Ул. 8 марта, 8, г. Орёл"
+                data-link="project1"
+                ></div>
+            <div 
+                class="banner__slides__slide" 
+                style="background-image: url('img/banner2.jpg');"
+                data-text="Дизайн и ремонт <br> квартиры 2"
+                data-address="Ул. 9 марта, 9, г. Орёл"
+                data-link="project2"
+                ></div>
+                <div 
+                class="banner__slides__slide" 
+                style="background-image: url('img/banner2.jpg');"
+                data-text="Дизайн и ремонт <br> квартиры 3"
+                data-address="Ул. 93 марта, 9, г. Орёл"
+                data-link="project3"
+                ></div>
+                <div 
+                class="banner__slides__slide" 
+                style="background-image: url('img/banner2.jpg');"
+                data-text="Дизайн и ремонт <br> квартиры 4"
+                data-address="Ул. 94 марта, 9, г. Орёл"
+                data-link="project4"
+                ></div>
+                <div 
+                class="banner__slides__slide" 
+                style="background-image: url('img/banner2.jpg');"
+                data-text="Дизайн и ремонт <br> квартиры 5"
+                data-address="Ул. 95 марта, 9, г. Орёл"
+                data-link="project5"
+                ></div>
         </div>
     </div>
 </div>

@@ -8,22 +8,56 @@
         </div>
         <div class="navbar__menu">
             <ul>
-                @@include('../items/menu.html')
+                <li class="is--active"><a href="@@pages.our_work">Услуги</a></li>
+                <li><a href="@@pages.our_work_design">Дизайн интерьера</a></li>
+                <li class="_resp-p2"><a href="@@pages.portfolio">Портфолио</a></li>
+                <li class="_resp-p2"><a href="@@pages.about">О компании</a></li>
+                <li class="_resp-p1"><a href="@@pages.reviews">Отзывы</a></li>
+                <li class="_resp-p1"><a href="@@pages.contacts">Контакты</a></li>
             </ul>
         </div>
-        <div class="navbar__city">
-            <div class="navbar__city__label">
-                <span>Воронеж</span>
-            </div>
-            <div class="navbar__city__list">
+        <div class="navbar__dropdown __navbar-drop">
+            <button class="hamburger hamburger--spin __navbar-drop__label" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+            <div class="__navbar-drop__menu">
                 <ul>
-                    <li class="is--active"><a href="#">Орёл</a></li>
+                    <li><a href="@@pages.blog">Блог</a></li>
+                    <li><a href="@@pages.vacancies">Вакансии</a></li>
+                    <li class="_resp-p1"><a href="@@pages.reviews">Отзывы</a></li>
+                    <li class="_resp-p1"><a href="@@pages.contacts">Контакты</a></li>
+                    <li class="_resp-p2"><a href="@@pages.portfolio">Портфолио</a></li>
+                    <li class="_resp-p2"><a href="@@pages.about">О компании</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="navbar__city __navbar-drop">
+            <div class="navbar__city__label __navbar-drop__label">Орел</div>
+            <div class="__navbar-drop__menu">
+                <ul>
+                    <li class="is--active"><a href="#">Орел</a></li>
                     <li><a href="#">Воронеж</a></li>
                 </ul>
             </div>
         </div>
+        <div class="navbar__soc">
+            <ul>
+                <li>
+                    <a href="#">
+                        @@include('../items/svg.html', {"name": "vk"})
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        @@include('../items/svg.html', {"name": "instagram"})
+                    </a>
+                </li>
+            </ul>
+        </div>
         <div class="navbar__phone">
-            <a href="tel:@@phone_link">@@phone</a>
+            <a href="@@phone_link">@@phone</a>
         </div>
         <div class="navbar__mbtn">
             <button class="hamburger hamburger--spin" type="button">
@@ -38,7 +72,14 @@
     <div class="navbar__mobile__inner">
         <div class="navbar__mobile__menu">
             <ul>
-                @@include('../items/menu.html')
+                <li class="is--active"><a href="@@pages.our_work">Услуги</a></li>
+                <li><a href="@@pages.our_work_design">Дизайн интерьера</a></li>
+                <li><a href="@@pages.portfolio">Портфолио</a></li>
+                <li><a href="@@pages.about">О компании</a></li>
+                <li><a href="@@pages.reviews">Отзывы</a></li>
+                <li><a href="@@pages.contacts">Контакты</a></li>
+                <li><a href="@@pages.blog">Блог</a></li>
+                <li><a href="@@pages.vacancies">Вакансии</a></li>
             </ul>
         </div>
         <div class="navbar__mobile__social">
@@ -68,3 +109,4 @@
         </div>
     </div>
 </div>
+<!-- @@include('alert.html') -->
