@@ -1,3 +1,329 @@
 .vacs {
-    
+    padding-bottom: 0;
+    overflow: hidden;
+    &__top {
+        padding-bottom: 50px;
+        &__inner {
+            display: flex;
+        }
+        &__left {
+            min-width: 380px;
+            width: 380px;
+            margin-right: 30px;
+            ul {
+                li {
+                    margin-bottom: 30px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                    a {
+                        font-weight: 800;
+                        font-size: 18px;
+                        color: #20313F;
+                        transition: .25s all ease;
+                        display: block;
+                        &:hover {
+                            color: $primary-color;
+                        }
+                    }
+                }
+            }
+        }
+        &__right {
+            width: 100%;
+            padding-right: 23.6vw;
+            p {
+                margin: 0 0 20px 0;
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 21px;
+            }
+            &::after {
+                content: url(../../img/vacs_top.png);
+                position: absolute;
+                right: 0;
+                top: 110px;
+                z-index: 0;
+            }
+        }
+    }
+    &__row {
+        padding: 50px 0;
+        &.is--grey {
+            background: #F3F3F3;
+            .vacs {
+                &__row {
+                    &__right {
+                        &__form {
+                            background: #fff;
+                        }
+                    }
+                }
+            }
+        }
+        &__wrap {
+            padding-left: 410px;
+            display: flex;
+            align-items: center;
+        }
+        &__left {
+            width: 520px;
+            min-width: 520px;
+            margin-right: 30px;
+            &__title {
+                font-weight: 800;
+                font-size: 48px;
+                margin-bottom: 25px;
+            }
+            &__sub {
+                font-weight: 800;
+                font-size: 24px;
+                line-height: 121.27%;
+                margin-bottom: 50px;
+            }
+            &__list {
+                margin-bottom: 35px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                &__title {
+                    margin-bottom: 25px;
+                    font-weight: 800;
+                    font-size: 18px;
+                    text-decoration-line: underline;
+                }
+                ul {
+                    li {
+                        padding: 8px 0;
+                        font-weight: 300;
+                        font-size: 18px;
+                        line-height: 18px;
+                        position: relative;
+                        padding-left: 22px;
+                        &::before {
+                            content: url(../../img/tick.svg);
+                            position: absolute;
+                            left: 0;
+                            top: 8px;
+                        }
+                    }
+                }
+            }
+        }
+        &__right {
+            width: 100%;
+            &__form {
+                background: #F3F3F3;
+                padding: 80px 125px 115px 140px;
+                &__title {
+                    font-weight: 800;
+                    font-size: 48px;
+                    margin-bottom: 35px;
+                }
+                &__sub {
+                    font-weight: 300;
+                    font-size: 18px;
+                    line-height: 21px;
+                    margin-bottom: 70px;
+                }
+                &__fields {
+                    .form__group {
+                        margin-bottom: 20px;
+                    }
+                    .form__file {
+                        padding: 25px 0;
+                        input[type="file"] {
+                            display: none;
+                        }
+                        label {
+                            display: block;
+                            cursor: pointer;
+                            svg {
+                                margin-right: 12px;
+                            }
+                        }
+                    }
+                    .form__submit {
+                        text-align: left;
+                        &__text {
+                            font-size: 12px;
+                            line-height: 114.15%;
+                            margin-bottom: 100px;
+                            span {
+                                display: inline;
+                            }
+                        }
+                        &__btn {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1800px) {
+    .vacs {
+        &__top {
+            &__right {
+                &::after {
+                    content: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1620px) {
+    .vacs {
+        &__row {
+            &__right {
+                &__form {
+                    padding: 80px 80px 115px 80px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1500px) {
+    .vacs {
+        &__top {
+            &__left {
+                min-width: 270px;
+                width: 270px;
+            }
+            &__right {
+                br {
+                    display: none;
+                }
+            }
+        }
+        &__row {
+            &__wrap {
+                padding-left: 0;
+                justify-content: center;
+            }
+            &__right {
+                max-width: 480px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .vacs {
+        &__top {
+            &__inner {
+                display: block;
+            }
+            &__left {
+                min-width: 0;
+                width: 100%;
+                margin-bottom: 20px;
+                ul {
+                    display: flex;
+                    flex-wrap: wrap;
+                    li {
+                        margin-bottom: 15px;
+                        margin-right: 30px;
+                    }
+                }
+            }
+            &__right {
+                padding-right: 0;
+            }
+        }
+        &__row {
+            &__wrap {
+                display: block;
+            }
+            &__left,
+            &__right {
+                max-width: 100%;
+                min-width: 0;
+                margin: 0;
+                width: 100%;
+            }
+            &__left {
+                margin-bottom: 50px;
+            }
+            &__right {
+                &__form {
+                    padding: 50px 40px;
+                    &__title {
+                        font-size: 28px;
+                        margin-bottom: 15px;
+                    }
+                    &__sub {
+                        font-size: 16px;
+                        line-height: 18px;
+                        margin-bottom: 20px;
+                    }
+                    &__fields {
+                        .form__submit {
+                            &__text {
+                                max-width: 100%;
+                                margin-bottom: 30px;
+                            }
+                        }
+                        .form__file {
+                            padding: 15px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .vacs {
+        &__top {
+            &__right {
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+        &__row {
+            &__inner {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            &__left {
+                padding-left: 30px;
+                padding-right: 30px;
+                margin-bottom: 0;
+                &__title {
+                    font-size: 26px;
+                    margin-bottom: 15px;
+                }
+                &__sub {
+                    font-size: 16px;
+                    margin-bottom: 30px;
+                    br {
+                        display: none;
+                    }
+                }
+                &__list {
+                    &__title {
+                        margin-bottom: 15px;
+                    }
+                    ul {
+                        li {
+                            font-size: 16px;
+                            padding: 5px 0 5px 22px;
+                        }
+                    }
+                }
+            }
+            &__right {
+                &__form {
+                    background: transparent !important;
+                }
+            }
+        }
+    }
 }

@@ -1,0 +1,71 @@
+<div class="vacs__row is--@@bg" id="@@id">
+    <div class="vacs__row__inner container">
+        <div class="vacs__row__wrap">
+            <div class="vacs__row__left">
+                <div class="vacs__row__left__title">@@title</div>
+                <div class="vacs__row__left__sub">@@sub</div>
+                <div class="vacs__row__left__list">
+                    <div class="vacs__row__left__list__title">Обязанности:</div>
+                    <ul>
+                        @@for(var i = 0; i < list1.length; i++) {
+                            <li>`+list1[i]+`</li>
+                        }
+                    </ul>
+                </div>
+                <div class="vacs__row__left__list">
+                    <div class="vacs__row__left__list__title">Требования:</div>
+                    <ul>
+                        @@for(var i = 0; i < list2.length; i++) {
+                            <li>`+list2[i]+`</li>
+                        }
+                    </ul>
+                </div>
+                <div class="vacs__row__left__list">
+                    <div class="vacs__row__left__list__title">Условия:</div>
+                    <ul>
+                        @@for(var i = 0; i < list3.length; i++) {
+                            <li>`+list3[i]+`</li>
+                        }
+                    </ul>
+                </div>
+            </div>
+            <div class="vacs__row__right">
+                <div class="vacs__row__right__form">
+                    <div class="vacs__row__right__form__title">Откликнуться <br> на вакансию</div>
+                    <div class="vacs__row__right__form__sub">Заполните форму ниже и мы свяжемся <br> с вами в ближайшее время.</div>
+                    <form class="vacs__row__right__form__fields">
+                        <div class="form__group is--border">
+                            <input type="text" placeholder="Ваше имя" required data-parsley-no-focus>
+                        </div>
+                        <div class="form__group is--border">
+                            <input type="text" placeholder="Телефон" required data-parsley-no-focus>
+                        </div>
+                        <div class="form__group is--border">
+                            <input type="text" placeholder="Комментарий" required data-parsley-no-focus>
+                        </div>
+                        <div class="form__file">
+                            <input type="file" id="file@@id" name="file@@id">
+                            <label for="file@@id">
+                                @@include('../../items/svg.html', {"name": "clip"})
+                                <span>Прикрепить резюме</span>
+                            </label>
+                        </div>
+                        <div class="form__submit">
+                            <div class="form__submit__text">
+                                Нажимая на кнопку отправить, Вы соглашаетесь с политикой <span><a href="#">обработки персональных данных</a></span>
+                            </div>
+                            <div class="form__submit__btn">
+                                @@include('../../items/button.html', {
+                                    "color": "default",
+                                    "type": "submit",
+                                    "text": "Отправить",
+                                    "href": "#"
+                                })
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
