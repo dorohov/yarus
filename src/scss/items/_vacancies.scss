@@ -10,6 +10,7 @@
             min-width: 380px;
             width: 380px;
             margin-right: 30px;
+            position: fixed;
             ul {
                 li {
                     margin-bottom: 30px;
@@ -31,6 +32,7 @@
         }
         &__right {
             width: 100%;
+            padding-left: 410px;
             padding-right: 23.6vw;
             p {
                 margin: 0 0 20px 0;
@@ -177,6 +179,14 @@
 
 @media (max-width: 1620px) {
     .vacs {
+        &__top {
+            &__left {
+                position: static;
+            }
+            &__right {
+                padding-left: 0;
+            }
+        }
         &__row {
             &__right {
                 &__form {

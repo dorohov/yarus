@@ -70,6 +70,12 @@
                 font-size: 16px;
                 line-height: 138%;
                 margin-bottom: 50px;
+                a {
+                    display: none;
+                }
+            }
+            &__read {
+                display: none;
             }
             &__footer {
                 display: flex;
@@ -177,11 +183,17 @@
     }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1050px) {
     .rews {
         &__block {
+            &__inner {
+                flex-wrap: wrap;
+            }
             &__left {
-                display: none;
+                margin-right: 0;
+                min-width: 0;
+                width: 100%;
+                margin-bottom: 30px;
             }
         }
     }
@@ -206,6 +218,31 @@
             }
         }
         &__block {
+            &__images {
+                display: block;
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+                &__left {
+                    margin-right: 0;
+                    margin-bottom: 10px;
+                }
+                &__right {
+                    display: flex;
+                    margin: 0 -5px;
+                    a {
+                        max-width: 50%;
+                        width: 100%;
+                        height: auto;
+                        padding: 0 5px;
+                        img {
+                            height: auto;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
             &__right {
                 &__title {
                     font-size: 24px;
@@ -223,6 +260,29 @@
                         a {
                             font-size: 14px;
                         }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .rews {
+        &__block {
+            &__right {
+                &__desc {
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    margin-bottom: 5px;
+                }
+                &__read {
+                    display: block;
+                    margin-bottom: 20px;
+                    a {
+                        font-size: 14px;
+                        color: $primary-color;
                     }
                 }
             }
